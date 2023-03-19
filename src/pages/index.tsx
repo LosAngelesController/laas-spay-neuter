@@ -2041,48 +2041,16 @@ const Home: NextPage = () => {
                       // const address = eachdeath.properties["Address"];
                       console.log("filteredfeatures", filteredfeatures);
 
-                      return `
-                      <li class="leading-none my-1">
-                        <div class="location">${
-                          eachdeath.properties["Location"] || "N/A"
-                        }</div>
-                        <div class="address">
-                          <span>${
-                            eachdeath.properties["Address"] || "N/A"
-                          }</span><br>
-                          <span>${
-                            eachdeath.properties["City"] || "N/A"
-                          }</span>, 
-                          <span>${eachdeath.properties["ZIP"] || "N/A"}</span>
-                        </div>
-                        <div class="phone">Phone: ${
-                          eachdeath.properties["Phone Number"] || "N/A"
-                        }</div>
-                        <div class="vet">Vet: ${
-                          eachdeath.properties["Veterinarian"] || "N/A"
-                        }</div>
-                        <div class="animals">
-                          <span>Cat S/N: ${
-                            eachdeath.properties["Cat S/N"] || "N/A"
-                          }</span><br>
-                          <span>Dog S/N: ${
-                            eachdeath.properties["Dog S/N"] || "N/A"
-                          }</span><br>
-                          <span>Rabbit S/N: ${
-                            eachdeath.properties["Rabbit S/N"] || "N/A"
-                          }</span><br>
-                          <span>Community Cat Program: ${
-                            eachdeath.properties[
-                              "Community Cat Program data"
-                            ] || "N/A"
-                          }</span>
-                        </div>
-                        <div class="discounted">Discounted/Free/Shelter: ${
-                          eachdeath.properties["Discounted/Free/Shelter"] ||
-                          "N/A"
-                        }</div>
-                      </li>
-                    `;
+                      return `<li class="leading-none  my-1">${eachdeath.properties["Location"]}<br>
+                      ${eachdeath.properties["Address"]}, ${eachdeath.properties["City"]} ${eachdeath.properties["ZIP"]}<br>
+                      Phone: ${eachdeath.properties["Phone Number"]}<br>
+                      Vet: ${eachdeath.properties["Veterinarian"]}<br>
+                      Cat S/N: ${eachdeath.properties["Cat S/N"]}, Dog S/N: ${eachdeath.properties["Dog S/N"]}<br>
+                      Rabbit S/N: ${eachdeath.properties["Rabbit S/N"]}, Community Cat Program: ${eachdeath.properties["Community Cat Program data"]}<br>
+                      Discounted/Free/Shelter: ${eachdeath.properties["Discounted/Free/Shelter"]}<br>
+    
+                  
+                      </li>`;
                     }
                   });
 
@@ -2507,8 +2475,8 @@ const Home: NextPage = () => {
               "line-opacity": 1,
               "line-width": 3,
             },
-          }
-          //  "road-label"
+          },
+          "road-label"
         );
 
         map.addSource("citycouncildist", {
@@ -2892,17 +2860,13 @@ const Home: NextPage = () => {
                                     }
                                     key={eachEntry[0]}
                                     onClick={(e) => {
-                                      // debugger
-                                      const f = document.getElementById(
-                                        "f"
-                                      ) as HTMLInputElement;
-                                      const d = document.getElementById(
-                                        "d"
-                                      ) as HTMLInputElement;
-                                      const s = document.getElementById(
-                                        "s"
-                                      ) as HTMLInputElement;
-
+                                      debugger;
+                                      const d =
+                                        document.getElementById("Discounted");
+                                      const f = document.getElementById("Free");
+                                      const s =
+                                        document.getElementById("Shelter");
+                                      console.log(f.checked);
                                       if (
                                         d.checked === true &&
                                         f.checked === true &&
@@ -3070,34 +3034,6 @@ const Home: NextPage = () => {
                                           ]
                                         );
                                       }
-
-                                      // const d = document.getElementById("Discounted")
-                                      // const f = document.getElementById("Free")
-                                      // const s = document.getElementById("Shelter")
-                                      // console.log(f.checked)
-                                      // if(d.checked === true  && f.checked === true && s.checked === true){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Free', 'Shelter']]  );
-                                      // }else if(d.checked === false  && f.checked === false && s.checked === false){
-                                      //   mapref.current.setFilter('park-volcanoes', ['==', ["get", "Discounted/Free/Shelter",], 'ABC']  );
-                                      // }else if(d.checked === false  && f.checked === true && s.checked === true){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free', 'Shelter']]  );
-                                      // }else if(d.checked === true  && f.checked ===false  && s.checked === true){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Shelter']]  );
-                                      // }else if(d.checked === true  && f.checked ===true  && s.checked === false){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Free']]  );
-                                      // }else if(d.checked === false  && f.checked === false && s.checked === true){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Shelter']]  );
-                                      // }else if(d.checked === true  && f.checked ===false  && s.checked === false){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted']]  );
-                                      // }else if(d.checked === false  && f.checked ===true  && s.checked === false){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free']]  );
-                                      // }else if(d.checked){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted']]  );
-                                      // }else if(f.checked){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free']]  );
-                                      // }else if(s.checked === true){
-                                      //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Shelter']]  );
-                                      // }
                                       // if(eachEntry[0] == "Discounted"){
                                       //   if(!e.target.checked){
                                       //     mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free', 'Shelter']]  );

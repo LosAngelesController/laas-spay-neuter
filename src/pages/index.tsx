@@ -107,9 +107,9 @@ const councilcount: any = {
 };
 
 const filterableraces: any = {
-  "Discounted": 39,
-  "Free": 22,
-  "Shelter": 7,
+  Discounted: 39,
+  Free: 22,
+  Shelter: 7,
 };
 
 const filterableraceskeys = Object.keys(filterableraces);
@@ -565,1333 +565,1332 @@ const Home: NextPage = () => {
       map.addSource("deathssource", {
         type: "geojson",
         data: {
-          "type": "FeatureCollection",
-          "features": [
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3109053,33.7622373 ]
-           },
-           "properties": {
-           "Location":"All Pets Veterinary Hospital",
-           "Address":"28326 S. Western Ave",
-           "City":"Ranchos Palos Verdes",
-           "ZIP":90275,
-           "Phone Number":"310-547-2784",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3962268,34.15915 ]
-           },
-           "properties": {
-           "Location":"Aloro Pet Clinic",
-           "Address":"4846 Laurel Canyon Blvd",
-           "City":"North Hollywood",
-           "ZIP":91607,
-           "Phone Number":"818-766-8197",
-           "Veterinarian":"",
-           "Cat S/N":"No",
-           "Dog S/N":"No",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.081072,33.9133666 ]
-           },
-           "properties": {
-           "Location":"AM PM Ideal Pet Care",
-           "Address":"12852 Pioneer Blvd",
-           "City":"Norwalk",
-           "ZIP":90650,
-           "Phone Number":"562-282-9639",
-          
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3964567,34.0751718 ]
-           },
-           "properties": {
-           "Location":"AMANDA FOUNDATION, THE",
-           "Address":"351 N. Foothill RD",
-           "City":"Beverly Hills",
-           "ZIP":90210,
-           "Phone Number":"310 278-2935",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"No",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3964567,34.0751718 ]
-           },
-           "properties": {
-           "Location":"Amanda Foundation, The ",
-           "Address":"351 N. Foothill RD ",
-           "City":"Beverly Hills",
-           "ZIP":90210,
-           "Phone Number":"310-278-2935",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3086626,33.897106 ]
-           },
-           "properties": {
-           "Location":"Amazing Small Animal Practice",
-           "Address":"14800 S Western Ave STE 102",
-           "City":"Gardena",
-           "ZIP":90249,
-           "Phone Number":"310-908-0510",
-         
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3086626,33.897106 ]
-           },
-           "properties": {
-           "Location":"Amazing Small Animal Practice",
-           "Address":"14800 S. Western Ave STE 102",
-           "City":"Gardena",
-           "ZIP":90249,
-           "Phone Number":"310-908-0510",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3291634,34.0226883 ]
-           },
-           "properties": {
-           "Location":"Angel City Pit Bulls",
-           "Address":"3612 11th Ave",
-           "City":"Los Angeles",
-           "ZIP":90018,
-           "Phone Number":"310 713-5673",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"No",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2787801,34.1585856 ]
-           },
-           "properties": {
-           "Location":"Angelus Pet Hospital",
-           "Address":"5846 San Fernando RD",
-           "City":"Glendale",
-           "ZIP":91202,
-           "Phone Number":"818 241-8333",
-           "Veterinarian":"Dr. Ahmed Khalek",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"No",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2787787,34.1587665 ]
-           },
-           "properties": {
-           "Location":"Angelus Pet Hospital",
-           "Address":"5846 San Fernando RD",
-           "City":"Glendale",
-           "ZIP":91202,
-           "Phone Number":"818 241-8333",
-           "Veterinarian":"Dr. Ahmed Khalek",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"No",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2261414,34.1434813 ]
-           },
-           "properties": {
-           "Location":"Animal Health Care Center",
-           "Address":"5211 El Verano Ave",
-           "City":"Los Angeles",
-           "ZIP":90041,
-           "Phone Number":"323 258-2122",
-           "Veterinarian":"Dr. Lisa Hsuan",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3275155,34.0213959 ]
-           },
-           "properties": {
-           "Location":"ARK Animal Hospital",
-           "Address":"2901 Exposition Boulevard",
-           "City":"Los Angeles",
-           "ZIP":90018,
-           "Phone Number":"323 402-0039",
-           "Veterinarian":"Dr. Salah Saleh",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3275155,34.0213959 ]
-           },
-           "properties": {
-           "Location":"ARK Animal Hospital",
-           "Address":"2901 Exposition Boulevard",
-           "City":"Los Angeles",
-           "ZIP":90018,
-           "Phone Number":"323 402-0039",
-           "Veterinarian":"Dr. Salah Saleh",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3109667,33.9850576 ]
-           },
-           "properties": {
-           "Location":"ASPCA",
-           "Address":"1850 60TH ST",
-           "City":"Los Angeles",
-           "ZIP":90047,
-           "Phone Number":"844 692-7722",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3109667,33.9850576 ]
-           },
-           "properties": {
-           "Location":"ASPCA",
-           "Address":"1850 60TH ST",
-           "City":"Los Angeles",
-           "ZIP":90047,
-           "Phone Number":"844 692-7722",
-           "Veterinarian":"",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3684697,34.1720312 ]
-           },
-           "properties": {
-           "Location":"Berkley Pet Hospital",
-           "Address":"10908 Burbank Boulevard",
-           "City":"N.Hollywood",
-           "ZIP":91601,
-           "Phone Number":"818 763-6221",
-           "Veterinarian":"Dr. Nabil Wisa",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4445156,34.1501419 ]
-           },
-           "properties": {
-           "Location":"Beverly Oaks Animal Hospita",
-           "Address":"14302 Ventura Blvd",
-           "City":"Sherman Oaks",
-           "ZIP":91423,
-           "Phone Number":"818 788-2022",
-           "Veterinarian":"Dr. Laurel Leach",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2865327,34.0736996 ]
-           },
-           "properties": {
-           "Location":"Beverly Virgil Animal Hospital",
-           "Address":"3363 West First Street",
-           "City":"Los Angeles",
-           "ZIP":90004,
-           "Phone Number":"213 387-3388",
-           "Veterinarian":"Dr. Seong Kim",
-           "Cat S/N":"No",
-           "Dog S/N":"No",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2941994,33.7521599 ]
-           },
-           "properties": {
-           "Location":"CAMP-Harbor",
-           "Address":"957 N. Gaffey Street",
-           "City":"San Pedro",
-           "ZIP":90731,
-           "Phone Number":"310 241-0768",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2941994,33.7521599 ]
-           },
-           "properties": {
-           "Location":"CAMP-Harbor",
-           "Address":"957 N. Gaffey Street",
-           "City":"San Pedro",
-           "ZIP":90731,
-           "Phone Number":"310 241-0768",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3291318,34.0225874 ]
-           },
-           "properties": {
-           "Location":"CAMP-Jefferson Park",
-           "Address":"3612 11TH AVE",
-           "City":"Los Angeles",
-           "ZIP":90018,
-           "Phone Number":"310 574-5555",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3291318,34.0225874 ]
-           },
-           "properties": {
-           "Location":"CAMP-Jefferson Park",
-           "Address":"3612 11TH AVE",
-           "City":"Los Angeles",
-           "ZIP":90018,
-           "Phone Number":"310 574-5555",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4657246,34.270965 ]
-           },
-           "properties": {
-           "Location":"CAMP-Mission Hills",
-           "Address":"15321 Brand Blvd",
-           "City":"Mission Hills",
-           "ZIP":91345,
-           "Phone Number":"310 574-5555",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes ",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4657246,34.270965 ]
-           },
-           "properties": {
-           "Location":"CAMP-Mission Hills",
-           "Address":"15321 Brand Blvd",
-           "City":"Mission Hills",
-           "ZIP":91345,
-           "Phone Number":"310 574-5555",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4081515,34.0185801 ]
-           },
-           "properties": {
-           "Location":"Center Sinai Animal Hospital",
-           "Address":"10737 Venice Blvd",
-           "City":"Los Angeles",
-           "ZIP":90034,
-           "Phone Number":"310 559-3770",
-           "Veterinarian":"Dr. Barry Baum",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4081515,34.0185801 ]
-           },
-           "properties": {
-           "Location":"Center Sinai Animal Hospital",
-           "Address":"10737 Venice Blvd",
-           "City":"Los Angeles",
-           "ZIP":90034,
-           "Phone Number":"310 559-3770",
-           "Veterinarian":"Dr. Barry Baum",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.5919443,34.2570064 ]
-           },
-           "properties": {
-           "Location":"Devonshire Animal Hospital",
-           "Address":"21032 Devonshire ST",
-           "City":"Chatsworth",
-           "ZIP":91311,
-           "Phone Number":"818 341-8080",
-           "Veterinarian":"Dr. Adel Fahmy",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4302373,34.2734772 ]
-           },
-           "properties": {
-           "Location":"Dill Veterinary Hospital",
-           "Address":"11207 San Fernando Road",
-           "City":"San Fernando",
-           "ZIP":91340,
-           "Phone Number":"818 899-5287",
-           "Veterinarian":"Dr. Amber Oliver",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4462302,34.1945912 ]
-           },
-           "properties": {
-           "Location":"East Valley Shelter",
-           "Address":"14409 Vanowen St",
-           "City":"Van Nuys",
-           "ZIP":91405,
-           "Phone Number":"888 452-7381",
-        
-           "Discounted/Free/Shelter":"Shelter"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3630307,34.2100976 ]
-           },
-           "properties": {
-           "Location":"FixNation",
-           "Address":"7680 Clybourn Ave",
-           "City":"Sun Valley",
-           "ZIP":91352,
-           "Phone Number":"818 524-2287",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"No",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3630307,34.2100976 ]
-           },
-           "properties": {
-           "Location":"FixNation",
-           "Address":"7680 Clybourn Ave",
-           "City":"Sun Valley",
-           "ZIP":91352,
-           "Phone Number":"818 524-2287",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"No",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2605384,34.128032 ]
-           },
-           "properties": {
-           "Location":"Gateway Small Animal Hospital",
-           "Address":"431 West Los Feliz Road",
-           "City":"Glendale",
-           "ZIP":91204,
-           "Phone Number":"323 256-5840",
-           "Veterinarian":"Dr. Rafael Villcana",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2605384,34.128032 ]
-           },
-           "properties": {
-           "Location":"Gateway Small Animal Hospital",
-           "Address":"431 West Los Feliz Road",
-           "City":"Glendale",
-           "ZIP":91204,
-           "Phone Number":"323 256-5840",
-           "Veterinarian":"Dr. Rafael Villcana",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3039317,33.9891079 ]
-           },
-           "properties": {
-           "Location":"Green Dog & Cat Hospital",
-           "Address":"1544 West Slauson Ave",
-           "City":"Los Angeles",
-           "ZIP":90047,
-           "Phone Number":"323 753-8440",
-           "Veterinarian":"Dr. Dina Bahl",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2941994,33.7521599 ]
-           },
-           "properties": {
-           "Location":"Harbor Shelter",
-           "Address":"957 N. Gaffey Street",
-           "City":"San Pedro",
-           "ZIP":90731,
-           "Phone Number":"888 452-7381",
-        
-        
-           "Discounted/Free/Shelter":"Shelter"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.5836301,34.2434347 ]
-           },
-           "properties": {
-           "Location":"Heaven on Earth Soc for Animals",
-           "Address":"20655 Plummer ST",
-           "City":"Chatsworth",
-           "ZIP":91311,
-           "Phone Number":"818 527-1344",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.5836301,34.2434347 ]
-           },
-           "properties": {
-           "Location":"Heaven on Earth Soc for Animals",
-           "Address":"20655 Plummer ST",
-           "City":"Chatsworth",
-           "ZIP":91311,
-           "Phone Number":"818 527-1344",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2024105,34.1205508 ]
-           },
-           "properties": {
-           "Location":"Highland Park Animal Hospital",
-           "Address":"5210 York Blvd",
-           "City":"Los Angeles",
-           "ZIP":90042,
-           "Phone Number":"323 254-6868",
-           "Veterinarian":"Dr. Melvin Gerstner",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4226514,34.2030837 ]
-           },
-           "properties": {
-           "Location":"Holiday Humane Society",
-           "Address":"7301 Fulton Ave",
-           "City":"N.Hollywood",
-           "ZIP":91605,
-           "Phone Number":"818 765-8196",
-           "Veterinarian":"Dr. Dung Bae",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3700036,34.168045 ]
-           },
-           "properties": {
-           "Location":"Kinder4Rescue Low Cost Pet Clinic",
-           "Address":"5308 Vineland Ave",
-           "City":"N. Hollywood",
-           "ZIP":91601,
-           "Phone Number":"818 505-0006",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3700036,34.168045 ]
-           },
-           "properties": {
-           "Location":"Kinder4Rescue Low Cost Pet Clinic",
-           "Address":"5308 Vineland Ave",
-           "City":"N. Hollywood",
-           "ZIP":91601,
-           "Phone Number":"818 505-0006",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2979772,33.7831602 ]
-           },
-           "properties": {
-           "Location":"Laguna Vista Veterinary Hospital",
-           "Address":"26333 South Vermont Ave",
-           "City":"Harbor City",
-           "ZIP":90710,
-           "Phone Number":"310 326-9371",
-           "Veterinarian":"Dr. R. Taylor",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4653469,34.1868774 ]
-           },
-           "properties": {
-           "Location":"LAKE BALBOA VETERINARY CORP",
-           "Address":"6440 SEPULVEDA BLVD STE B",
-           "City":"VAN NUYS",
-           "ZIP":91411,
-           "Phone Number":"818 907-0929",
-           "Veterinarian":"",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No ",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4301125,34.0036976 ]
-           },
-           "properties": {
-           "Location":"Mar Vista Animal Medical Center",
-           "Address":"3850 Grandview Boulevard",
-           "City":"Los Angeles",
-           "ZIP":90066,
-           "Phone Number":"310 391-6741",
-           "Veterinarian":"Dr. Wendy Brooks",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.5095385,34.2082988 ]
-           },
-           "properties": {
-           "Location":"Mid-Valley Animal Hospital",
-           "Address":"17280 Saticoy ST",
-           "City":"Van Nuys",
-           "ZIP":91406,
-           "Phone Number":"818 705-4585",
-           "Veterinarian":"Dr. Aaron Schoolman",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.2188403,34.0836927 ]
-           },
-           "properties": {
-           "Location":"North Central Shelter",
-           "Address":"3201 Lacy St",
-           "City":"Los Angeles",
-           "ZIP":90031,
-           "Phone Number":"888 452-7381",
-        
-           "Discounted/Free/Shelter":"Shelter"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.1945109,34.108499 ]
-           },
-           "properties": {
-           "Location":"North Figueroa Animal Hospital",
-           "Address":"5550 North Figueroa St",
-           "City":"Los Angeles",
-           "ZIP":90042,
-           "Phone Number":"323 258-8068",
-           "Veterinarian":"Dr. Rolando Vasquez",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.1945109,34.108499 ]
-           },
-           "properties": {
-           "Location":"North Figueroa Animal Hospital",
-           "Address":"5550 North Figueroa St",
-           "City":"Los Angeles",
-           "ZIP":90042,
-           "Phone Number":"323 258-8068",
-           "Veterinarian":"Dr. Rolando Vasquez",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-         
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.5015835,34.2737658 ]
-           },
-           "properties": {
-           "Location":"North Valley Veterinary Clinic",
-           "Address":"11152 Balboa Blvd",
-           "City":"Granada Hills",
-           "ZIP":91344,
-           "Phone Number":"818 366-7777",
-           "Veterinarian":"Dr. William Bender",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4657246,34.270965 ]
-           },
-           "properties": {
-           "Location":"Northeast Valley Shelter",
-           "Address":"15321 Brand Blvd",
-           "City":"Mission Hills",
-           "ZIP":91345,
-           "Phone Number":"310 738-0842",
-           "Veterinarian":"",
-        
-           "Discounted/Free/Shelter":"Shelter"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3310539,33.970333 ]
-           },
-           "properties": {
-           "Location":"QUALITY ANIMAL CLINIC",
-           "Address":"7625 Crenshaw Blvd",
-           "City":"Los Angeles",
-           "ZIP":90043,
-           "Phone Number":"323 920-7448",
-           "Veterinarian":"Dr. Catherine Harrison",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3310539,33.970333 ]
-           },
-           "properties": {
-           "Location":"QUALITY ANIMAL CLINIC",
-           "Address":"7625 Crenshaw Blvd ANIMAL TYPE S/N SERVICES",
-           "City":"Los Angeles",
-           "ZIP":90043,
-           "Phone Number":"323 920-7448",
-           "Veterinarian":"Dr. Catherine Harrison",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4644094,34.3186511 ]
-           },
-           "properties": {
-           "Location":"Roxford Veterinary Clinic",
-           "Address":"13571 Glenoaks Blvd",
-           "City":"Sylmar",
-           "ZIP":91342,
-           "Phone Number":"818 364-2394",
-           "Veterinarian":"Dr. Teresa Long",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4406515,34.0349112 ]
-           },
-           "properties": {
-           "Location":"Shelter Veterinary-Value Vet",
-           "Address":"11361 W. Pico Blvd",
-           "City":"Los Angeles",
-           "ZIP":90064,
-           "Phone Number":"310 473-4295",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4406515,34.0349112 ]
-           },
-           "properties": {
-           "Location":"Shelter Veterinary-Value Vet",
-           "Address":"11361 W. Pico Blvd",
-           "City":"Los Angeles",
-           "ZIP":90064,
-           "Phone Number":"310 473-4295",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3109667,33.9850576 ]
-           },
-           "properties": {
-           "Location":"South LA/Chesterfield Square Shelter",
-           "Address":"1850 W. 60th St.",
-           "City":"Los Angeles",
-           "ZIP":90047,
-           "Phone Number":"888 452-7381",
-        
-           "Discounted/Free/Shelter":"Shelter"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3117264,33.7236149 ]
-           },
-           "properties": {
-           "Location":"South Shore Pet Clinic",
-           "Address":"2318 South Western Avenue",
-           "City":"San Pedro",
-           "ZIP":90732,
-           "Phone Number":"310 832-5327",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.3117264,33.7236149 ]
-           },
-           "properties": {
-           "Location":"South Shore Pet Clinic",
-           "Address":"2318 South Western Avenue",
-           "City":"San Pedro",
-           "ZIP":90732,
-           "Phone Number":"310 832-5327",
-           "Veterinarian":"Dr. Mark Weimer",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.053621,34.0510163 ]
-           },
-           "properties": {
-           "Location":"Stray Paws Animal Haven",
-           "Address":"9858 Rush St",
-           "City":"El Monte",
-           "ZIP":91733,
-           "Phone Number":"818 968-7150",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.053621,34.0510163 ]
-           },
-           "properties": {
-           "Location":"Stray Paws Animal Haven",
-           "Address":"9858 Rush St",
-           "City":"El Monte",
-           "ZIP":91733,
-           "Phone Number":"818 968-7150",
-          
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.6025063,34.2009036 ]
-           },
-           "properties": {
-           "Location":"Value Veterinary Services-CP",
-           "Address":"21724-B Sherman Way",
-           "City":"Canoga Park",
-           "ZIP":91303,
-           "Phone Number":"818 592-0092",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.6025063,34.2009036 ]
-           },
-           "properties": {
-           "Location":"Value Veterinary Services-CP",
-           "Address":"21724-B Sherman Way",
-           "City":"Canoga Park",
-           "ZIP":91303,
-           "Phone Number":"818 592-0092",
-           "Veterinarian":"Dr. L. Davidson",
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"No",
-        
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.7650657,34.1459566 ]
-           },
-           "properties": {
-           "Location":"Veterinary Angels",
-           "Address":"29348 Roadside DR",
-           "City":"Agoura Hills",
-           "ZIP":91301,
-           "Phone Number":"818 865-1800",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.7650657,34.1459566 ]
-           },
-           "properties": {
-           "Location":"Veterinary Angels",
-           "Address":"29348 Roadside DR",
-           "City":"Agoura Hills",
-           "ZIP":91301,
-           "Phone Number":"818 865-1800",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4406515,34.0349112 ]
-           },
-           "properties": {
-           "Location":"West LA Shelter",
-           "Address":"11361 W. Pico Blvd",
-           "City":"Los Angeles",
-           "ZIP":90064,
-           "Phone Number":"888 452-7381",
-        
-           "Discounted/Free/Shelter":"Shelter"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.5836301,34.2434347 ]
-           },
-           "properties": {
-           "Location":"West Valley Shelter",
-           "Address":"20655 Plummer St",
-           "City":"Chatsworth",
-           "ZIP":91311,
-           "Phone Number":"888 452-7381",
-          
-           "Discounted/Free/Shelter":"Shelter"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4462302,34.1945912 ]
-           },
-           "properties": {
-           "Location":"WesternU Spay & Neuter Center - East Valley",
-           "Address":"14409 Vanowen ST",
-           "City":"Van Nuys",
-           "ZIP":91405,
-           "Phone Number":"818 510-0197",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Discounted"
-           }
-         },
-         {
-           "type": "Feature",
-           "geometry": {
-              "type": "Point",
-              "coordinates":  [ -118.4462302,34.1945912 ]
-           },
-           "properties": {
-           "Location":"WesternU Spay & Neuter Center - East Valley",
-           "Address":"14409 Vanowen ST",
-           "City":"Van Nuys",
-           "ZIP":91405,
-           "Phone Number":"818 510-0197",
-        
-           "Cat S/N":"Yes",
-           "Dog S/N":"Yes",
-           "Rabbit S/N":"Yes",
-           "Community Cat Program":"Yes",
-           "Discounted/Free/Shelter":"Free"
-           }
-         }
-       ]
-       }
+          type: "FeatureCollection",
+          features: [
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3109053, 33.7622373],
+              },
+              properties: {
+                Location: "All Pets Veterinary Hospital",
+                Address: "28326 S. Western Ave",
+                City: "Ranchos Palos Verdes",
+                ZIP: 90275,
+                "Phone Number": "310-547-2784",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3962268, 34.15915],
+              },
+              properties: {
+                Location: "Aloro Pet Clinic",
+                Address: "4846 Laurel Canyon Blvd",
+                City: "North Hollywood",
+                ZIP: 91607,
+                "Phone Number": "818-766-8197",
+                Veterinarian: "",
+                "Cat S/N": "No",
+                "Dog S/N": "No",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.081072, 33.9133666],
+              },
+              properties: {
+                Location: "AM PM Ideal Pet Care",
+                Address: "12852 Pioneer Blvd",
+                City: "Norwalk",
+                ZIP: 90650,
+                "Phone Number": "562-282-9639",
+
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3964567, 34.0751718],
+              },
+              properties: {
+                Location: "AMANDA FOUNDATION, THE",
+                Address: "351 N. Foothill RD",
+                City: "Beverly Hills",
+                ZIP: 90210,
+                "Phone Number": "310 278-2935",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "No",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3964567, 34.0751718],
+              },
+              properties: {
+                Location: "Amanda Foundation, The ",
+                Address: "351 N. Foothill RD ",
+                City: "Beverly Hills",
+                ZIP: 90210,
+                "Phone Number": "310-278-2935",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3086626, 33.897106],
+              },
+              properties: {
+                Location: "Amazing Small Animal Practice",
+                Address: "14800 S Western Ave STE 102",
+                City: "Gardena",
+                ZIP: 90249,
+                "Phone Number": "310-908-0510",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3086626, 33.897106],
+              },
+              properties: {
+                Location: "Amazing Small Animal Practice",
+                Address: "14800 S. Western Ave STE 102",
+                City: "Gardena",
+                ZIP: 90249,
+                "Phone Number": "310-908-0510",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3291634, 34.0226883],
+              },
+              properties: {
+                Location: "Angel City Pit Bulls",
+                Address: "3612 11th Ave",
+                City: "Los Angeles",
+                ZIP: 90018,
+                "Phone Number": "310 713-5673",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "No",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2787801, 34.1585856],
+              },
+              properties: {
+                Location: "Angelus Pet Hospital",
+                Address: "5846 San Fernando RD",
+                City: "Glendale",
+                ZIP: 91202,
+                "Phone Number": "818 241-8333",
+                Veterinarian: "Dr. Ahmed Khalek",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "No",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2787787, 34.1587665],
+              },
+              properties: {
+                Location: "Angelus Pet Hospital",
+                Address: "5846 San Fernando RD",
+                City: "Glendale",
+                ZIP: 91202,
+                "Phone Number": "818 241-8333",
+                Veterinarian: "Dr. Ahmed Khalek",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "No",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2261414, 34.1434813],
+              },
+              properties: {
+                Location: "Animal Health Care Center",
+                Address: "5211 El Verano Ave",
+                City: "Los Angeles",
+                ZIP: 90041,
+                "Phone Number": "323 258-2122",
+                Veterinarian: "Dr. Lisa Hsuan",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3275155, 34.0213959],
+              },
+              properties: {
+                Location: "ARK Animal Hospital",
+                Address: "2901 Exposition Boulevard",
+                City: "Los Angeles",
+                ZIP: 90018,
+                "Phone Number": "323 402-0039",
+                Veterinarian: "Dr. Salah Saleh",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3275155, 34.0213959],
+              },
+              properties: {
+                Location: "ARK Animal Hospital",
+                Address: "2901 Exposition Boulevard",
+                City: "Los Angeles",
+                ZIP: 90018,
+                "Phone Number": "323 402-0039",
+                Veterinarian: "Dr. Salah Saleh",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3109667, 33.9850576],
+              },
+              properties: {
+                Location: "ASPCA",
+                Address: "1850 60TH ST",
+                City: "Los Angeles",
+                ZIP: 90047,
+                "Phone Number": "844 692-7722",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3109667, 33.9850576],
+              },
+              properties: {
+                Location: "ASPCA",
+                Address: "1850 60TH ST",
+                City: "Los Angeles",
+                ZIP: 90047,
+                "Phone Number": "844 692-7722",
+                Veterinarian: "",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3684697, 34.1720312],
+              },
+              properties: {
+                Location: "Berkley Pet Hospital",
+                Address: "10908 Burbank Boulevard",
+                City: "N.Hollywood",
+                ZIP: 91601,
+                "Phone Number": "818 763-6221",
+                Veterinarian: "Dr. Nabil Wisa",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4445156, 34.1501419],
+              },
+              properties: {
+                Location: "Beverly Oaks Animal Hospita",
+                Address: "14302 Ventura Blvd",
+                City: "Sherman Oaks",
+                ZIP: 91423,
+                "Phone Number": "818 788-2022",
+                Veterinarian: "Dr. Laurel Leach",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2865327, 34.0736996],
+              },
+              properties: {
+                Location: "Beverly Virgil Animal Hospital",
+                Address: "3363 West First Street",
+                City: "Los Angeles",
+                ZIP: 90004,
+                "Phone Number": "213 387-3388",
+                Veterinarian: "Dr. Seong Kim",
+                "Cat S/N": "No",
+                "Dog S/N": "No",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2941994, 33.7521599],
+              },
+              properties: {
+                Location: "CAMP-Harbor",
+                Address: "957 N. Gaffey Street",
+                City: "San Pedro",
+                ZIP: 90731,
+                "Phone Number": "310 241-0768",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2941994, 33.7521599],
+              },
+              properties: {
+                Location: "CAMP-Harbor",
+                Address: "957 N. Gaffey Street",
+                City: "San Pedro",
+                ZIP: 90731,
+                "Phone Number": "310 241-0768",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3291318, 34.0225874],
+              },
+              properties: {
+                Location: "CAMP-Jefferson Park",
+                Address: "3612 11TH AVE",
+                City: "Los Angeles",
+                ZIP: 90018,
+                "Phone Number": "310 574-5555",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3291318, 34.0225874],
+              },
+              properties: {
+                Location: "CAMP-Jefferson Park",
+                Address: "3612 11TH AVE",
+                City: "Los Angeles",
+                ZIP: 90018,
+                "Phone Number": "310 574-5555",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4657246, 34.270965],
+              },
+              properties: {
+                Location: "CAMP-Mission Hills",
+                Address: "15321 Brand Blvd",
+                City: "Mission Hills",
+                ZIP: 91345,
+                "Phone Number": "310 574-5555",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes ",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4657246, 34.270965],
+              },
+              properties: {
+                Location: "CAMP-Mission Hills",
+                Address: "15321 Brand Blvd",
+                City: "Mission Hills",
+                ZIP: 91345,
+                "Phone Number": "310 574-5555",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4081515, 34.0185801],
+              },
+              properties: {
+                Location: "Center Sinai Animal Hospital",
+                Address: "10737 Venice Blvd",
+                City: "Los Angeles",
+                ZIP: 90034,
+                "Phone Number": "310 559-3770",
+                Veterinarian: "Dr. Barry Baum",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4081515, 34.0185801],
+              },
+              properties: {
+                Location: "Center Sinai Animal Hospital",
+                Address: "10737 Venice Blvd",
+                City: "Los Angeles",
+                ZIP: 90034,
+                "Phone Number": "310 559-3770",
+                Veterinarian: "Dr. Barry Baum",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.5919443, 34.2570064],
+              },
+              properties: {
+                Location: "Devonshire Animal Hospital",
+                Address: "21032 Devonshire ST",
+                City: "Chatsworth",
+                ZIP: 91311,
+                "Phone Number": "818 341-8080",
+                Veterinarian: "Dr. Adel Fahmy",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4302373, 34.2734772],
+              },
+              properties: {
+                Location: "Dill Veterinary Hospital",
+                Address: "11207 San Fernando Road",
+                City: "San Fernando",
+                ZIP: 91340,
+                "Phone Number": "818 899-5287",
+                Veterinarian: "Dr. Amber Oliver",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4462302, 34.1945912],
+              },
+              properties: {
+                Location: "East Valley Shelter",
+                Address: "14409 Vanowen St",
+                City: "Van Nuys",
+                ZIP: 91405,
+                "Phone Number": "888 452-7381",
+
+                "Discounted/Free/Shelter": "Shelter",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3630307, 34.2100976],
+              },
+              properties: {
+                Location: "FixNation",
+                Address: "7680 Clybourn Ave",
+                City: "Sun Valley",
+                ZIP: 91352,
+                "Phone Number": "818 524-2287",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "No",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3630307, 34.2100976],
+              },
+              properties: {
+                Location: "FixNation",
+                Address: "7680 Clybourn Ave",
+                City: "Sun Valley",
+                ZIP: 91352,
+                "Phone Number": "818 524-2287",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "No",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2605384, 34.128032],
+              },
+              properties: {
+                Location: "Gateway Small Animal Hospital",
+                Address: "431 West Los Feliz Road",
+                City: "Glendale",
+                ZIP: 91204,
+                "Phone Number": "323 256-5840",
+                Veterinarian: "Dr. Rafael Villcana",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2605384, 34.128032],
+              },
+              properties: {
+                Location: "Gateway Small Animal Hospital",
+                Address: "431 West Los Feliz Road",
+                City: "Glendale",
+                ZIP: 91204,
+                "Phone Number": "323 256-5840",
+                Veterinarian: "Dr. Rafael Villcana",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3039317, 33.9891079],
+              },
+              properties: {
+                Location: "Green Dog & Cat Hospital",
+                Address: "1544 West Slauson Ave",
+                City: "Los Angeles",
+                ZIP: 90047,
+                "Phone Number": "323 753-8440",
+                Veterinarian: "Dr. Dina Bahl",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2941994, 33.7521599],
+              },
+              properties: {
+                Location: "Harbor Shelter",
+                Address: "957 N. Gaffey Street",
+                City: "San Pedro",
+                ZIP: 90731,
+                "Phone Number": "888 452-7381",
+
+                "Discounted/Free/Shelter": "Shelter",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.5836301, 34.2434347],
+              },
+              properties: {
+                Location: "Heaven on Earth Soc for Animals",
+                Address: "20655 Plummer ST",
+                City: "Chatsworth",
+                ZIP: 91311,
+                "Phone Number": "818 527-1344",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.5836301, 34.2434347],
+              },
+              properties: {
+                Location: "Heaven on Earth Soc for Animals",
+                Address: "20655 Plummer ST",
+                City: "Chatsworth",
+                ZIP: 91311,
+                "Phone Number": "818 527-1344",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2024105, 34.1205508],
+              },
+              properties: {
+                Location: "Highland Park Animal Hospital",
+                Address: "5210 York Blvd",
+                City: "Los Angeles",
+                ZIP: 90042,
+                "Phone Number": "323 254-6868",
+                Veterinarian: "Dr. Melvin Gerstner",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4226514, 34.2030837],
+              },
+              properties: {
+                Location: "Holiday Humane Society",
+                Address: "7301 Fulton Ave",
+                City: "N.Hollywood",
+                ZIP: 91605,
+                "Phone Number": "818 765-8196",
+                Veterinarian: "Dr. Dung Bae",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3700036, 34.168045],
+              },
+              properties: {
+                Location: "Kinder4Rescue Low Cost Pet Clinic",
+                Address: "5308 Vineland Ave",
+                City: "N. Hollywood",
+                ZIP: 91601,
+                "Phone Number": "818 505-0006",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3700036, 34.168045],
+              },
+              properties: {
+                Location: "Kinder4Rescue Low Cost Pet Clinic",
+                Address: "5308 Vineland Ave",
+                City: "N. Hollywood",
+                ZIP: 91601,
+                "Phone Number": "818 505-0006",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2979772, 33.7831602],
+              },
+              properties: {
+                Location: "Laguna Vista Veterinary Hospital",
+                Address: "26333 South Vermont Ave",
+                City: "Harbor City",
+                ZIP: 90710,
+                "Phone Number": "310 326-9371",
+                Veterinarian: "Dr. R. Taylor",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4653469, 34.1868774],
+              },
+              properties: {
+                Location: "LAKE BALBOA VETERINARY CORP",
+                Address: "6440 SEPULVEDA BLVD STE B",
+                City: "VAN NUYS",
+                ZIP: 91411,
+                "Phone Number": "818 907-0929",
+                Veterinarian: "",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No ",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4301125, 34.0036976],
+              },
+              properties: {
+                Location: "Mar Vista Animal Medical Center",
+                Address: "3850 Grandview Boulevard",
+                City: "Los Angeles",
+                ZIP: 90066,
+                "Phone Number": "310 391-6741",
+                Veterinarian: "Dr. Wendy Brooks",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.5095385, 34.2082988],
+              },
+              properties: {
+                Location: "Mid-Valley Animal Hospital",
+                Address: "17280 Saticoy ST",
+                City: "Van Nuys",
+                ZIP: 91406,
+                "Phone Number": "818 705-4585",
+                Veterinarian: "Dr. Aaron Schoolman",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.2188403, 34.0836927],
+              },
+              properties: {
+                Location: "North Central Shelter",
+                Address: "3201 Lacy St",
+                City: "Los Angeles",
+                ZIP: 90031,
+                "Phone Number": "888 452-7381",
+
+                "Discounted/Free/Shelter": "Shelter",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.1945109, 34.108499],
+              },
+              properties: {
+                Location: "North Figueroa Animal Hospital",
+                Address: "5550 North Figueroa St",
+                City: "Los Angeles",
+                ZIP: 90042,
+                "Phone Number": "323 258-8068",
+                Veterinarian: "Dr. Rolando Vasquez",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.1945109, 34.108499],
+              },
+              properties: {
+                Location: "North Figueroa Animal Hospital",
+                Address: "5550 North Figueroa St",
+                City: "Los Angeles",
+                ZIP: 90042,
+                "Phone Number": "323 258-8068",
+                Veterinarian: "Dr. Rolando Vasquez",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.5015835, 34.2737658],
+              },
+              properties: {
+                Location: "North Valley Veterinary Clinic",
+                Address: "11152 Balboa Blvd",
+                City: "Granada Hills",
+                ZIP: 91344,
+                "Phone Number": "818 366-7777",
+                Veterinarian: "Dr. William Bender",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4657246, 34.270965],
+              },
+              properties: {
+                Location: "Northeast Valley Shelter",
+                Address: "15321 Brand Blvd",
+                City: "Mission Hills",
+                ZIP: 91345,
+                "Phone Number": "310 738-0842",
+                Veterinarian: "",
+
+                "Discounted/Free/Shelter": "Shelter",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3310539, 33.970333],
+              },
+              properties: {
+                Location: "QUALITY ANIMAL CLINIC",
+                Address: "7625 Crenshaw Blvd",
+                City: "Los Angeles",
+                ZIP: 90043,
+                "Phone Number": "323 920-7448",
+                Veterinarian: "Dr. Catherine Harrison",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3310539, 33.970333],
+              },
+              properties: {
+                Location: "QUALITY ANIMAL CLINIC",
+                Address: "7625 Crenshaw Blvd ANIMAL TYPE S/N SERVICES",
+                City: "Los Angeles",
+                ZIP: 90043,
+                "Phone Number": "323 920-7448",
+                Veterinarian: "Dr. Catherine Harrison",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4644094, 34.3186511],
+              },
+              properties: {
+                Location: "Roxford Veterinary Clinic",
+                Address: "13571 Glenoaks Blvd",
+                City: "Sylmar",
+                ZIP: 91342,
+                "Phone Number": "818 364-2394",
+                Veterinarian: "Dr. Teresa Long",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4406515, 34.0349112],
+              },
+              properties: {
+                Location: "Shelter Veterinary-Value Vet",
+                Address: "11361 W. Pico Blvd",
+                City: "Los Angeles",
+                ZIP: 90064,
+                "Phone Number": "310 473-4295",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4406515, 34.0349112],
+              },
+              properties: {
+                Location: "Shelter Veterinary-Value Vet",
+                Address: "11361 W. Pico Blvd",
+                City: "Los Angeles",
+                ZIP: 90064,
+                "Phone Number": "310 473-4295",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3109667, 33.9850576],
+              },
+              properties: {
+                Location: "South LA/Chesterfield Square Shelter",
+                Address: "1850 W. 60th St.",
+                City: "Los Angeles",
+                ZIP: 90047,
+                "Phone Number": "888 452-7381",
+
+                "Discounted/Free/Shelter": "Shelter",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3117264, 33.7236149],
+              },
+              properties: {
+                Location: "South Shore Pet Clinic",
+                Address: "2318 South Western Avenue",
+                City: "San Pedro",
+                ZIP: 90732,
+                "Phone Number": "310 832-5327",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.3117264, 33.7236149],
+              },
+              properties: {
+                Location: "South Shore Pet Clinic",
+                Address: "2318 South Western Avenue",
+                City: "San Pedro",
+                ZIP: 90732,
+                "Phone Number": "310 832-5327",
+                Veterinarian: "Dr. Mark Weimer",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.053621, 34.0510163],
+              },
+              properties: {
+                Location: "Stray Paws Animal Haven",
+                Address: "9858 Rush St",
+                City: "El Monte",
+                ZIP: 91733,
+                "Phone Number": "818 968-7150",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.053621, 34.0510163],
+              },
+              properties: {
+                Location: "Stray Paws Animal Haven",
+                Address: "9858 Rush St",
+                City: "El Monte",
+                ZIP: 91733,
+                "Phone Number": "818 968-7150",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.6025063, 34.2009036],
+              },
+              properties: {
+                Location: "Value Veterinary Services-CP",
+                Address: "21724-B Sherman Way",
+                City: "Canoga Park",
+                ZIP: 91303,
+                "Phone Number": "818 592-0092",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.6025063, 34.2009036],
+              },
+              properties: {
+                Location: "Value Veterinary Services-CP",
+                Address: "21724-B Sherman Way",
+                City: "Canoga Park",
+                ZIP: 91303,
+                "Phone Number": "818 592-0092",
+                Veterinarian: "Dr. L. Davidson",
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "No",
+
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.7650657, 34.1459566],
+              },
+              properties: {
+                Location: "Veterinary Angels",
+                Address: "29348 Roadside DR",
+                City: "Agoura Hills",
+                ZIP: 91301,
+                "Phone Number": "818 865-1800",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.7650657, 34.1459566],
+              },
+              properties: {
+                Location: "Veterinary Angels",
+                Address: "29348 Roadside DR",
+                City: "Agoura Hills",
+                ZIP: 91301,
+                "Phone Number": "818 865-1800",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4406515, 34.0349112],
+              },
+              properties: {
+                Location: "West LA Shelter",
+                Address: "11361 W. Pico Blvd",
+                City: "Los Angeles",
+                ZIP: 90064,
+                "Phone Number": "888 452-7381",
+
+                "Discounted/Free/Shelter": "Shelter",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.5836301, 34.2434347],
+              },
+              properties: {
+                Location: "West Valley Shelter",
+                Address: "20655 Plummer St",
+                City: "Chatsworth",
+                ZIP: 91311,
+                "Phone Number": "888 452-7381",
+
+                "Discounted/Free/Shelter": "Shelter",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4462302, 34.1945912],
+              },
+              properties: {
+                Location: "WesternU Spay & Neuter Center - East Valley",
+                Address: "14409 Vanowen ST",
+                City: "Van Nuys",
+                ZIP: 91405,
+                "Phone Number": "818 510-0197",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Discounted",
+              },
+            },
+            {
+              type: "Feature",
+              geometry: {
+                type: "Point",
+                coordinates: [-118.4462302, 34.1945912],
+              },
+              properties: {
+                Location: "WesternU Spay & Neuter Center - East Valley",
+                Address: "14409 Vanowen ST",
+                City: "Van Nuys",
+                ZIP: 91405,
+                "Phone Number": "818 510-0197",
+
+                "Cat S/N": "Yes",
+                "Dog S/N": "Yes",
+                "Rabbit S/N": "Yes",
+                "Community Cat Program": "Yes",
+                "Discounted/Free/Shelter": "Free",
+              },
+            },
+          ],
+        },
       });
 
       map.addLayer({
@@ -2039,38 +2038,53 @@ const Home: NextPage = () => {
 
                   const allthelineitems = filteredfeatures.map((eachdeath) => {
                     if (eachdeath.properties) {
-                     // const address = eachdeath.properties["Address"];
+                      // const address = eachdeath.properties["Address"];
                       console.log("filteredfeatures", filteredfeatures);
-                  
+
                       return `
                       <li class="leading-none my-1">
-                        <div class="location">${eachdeath.properties["Location"] || "N/A"}</div>
+                        <div class="location">${
+                          eachdeath.properties["Location"] || "N/A"
+                        }</div>
                         <div class="address">
-                          <span>${eachdeath.properties["Address"] || "N/A"}</span><br>
-                          <span>${eachdeath.properties["City"] || "N/A"}</span>, 
+                          <span>${
+                            eachdeath.properties["Address"] || "N/A"
+                          }</span><br>
+                          <span>${
+                            eachdeath.properties["City"] || "N/A"
+                          }</span>, 
                           <span>${eachdeath.properties["ZIP"] || "N/A"}</span>
                         </div>
-                        <div class="phone">Phone: ${eachdeath.properties["Phone Number"] || "N/A"}</div>
-                        <div class="vet">Vet: ${eachdeath.properties["Veterinarian"] || "N/A"}</div>
+                        <div class="phone">Phone: ${
+                          eachdeath.properties["Phone Number"] || "N/A"
+                        }</div>
+                        <div class="vet">Vet: ${
+                          eachdeath.properties["Veterinarian"] || "N/A"
+                        }</div>
                         <div class="animals">
-                          <span>Cat S/N: ${eachdeath.properties["Cat S/N"] || "N/A"}</span><br>
-                          <span>Dog S/N: ${eachdeath.properties["Dog S/N"] || "N/A"}</span><br>
-                          <span>Rabbit S/N: ${eachdeath.properties["Rabbit S/N"] || "N/A"}</span><br>
-                          <span>Community Cat Program: ${eachdeath.properties["Community Cat Program data"] || "N/A"}</span>
+                          <span>Cat S/N: ${
+                            eachdeath.properties["Cat S/N"] || "N/A"
+                          }</span><br>
+                          <span>Dog S/N: ${
+                            eachdeath.properties["Dog S/N"] || "N/A"
+                          }</span><br>
+                          <span>Rabbit S/N: ${
+                            eachdeath.properties["Rabbit S/N"] || "N/A"
+                          }</span><br>
+                          <span>Community Cat Program: ${
+                            eachdeath.properties[
+                              "Community Cat Program data"
+                            ] || "N/A"
+                          }</span>
                         </div>
-                        <div class="discounted">Discounted/Free/Shelter: ${eachdeath.properties["Discounted/Free/Shelter"] || "N/A"}</div>
+                        <div class="discounted">Discounted/Free/Shelter: ${
+                          eachdeath.properties["Discounted/Free/Shelter"] ||
+                          "N/A"
+                        }</div>
                       </li>
                     `;
-                    
-                    
-                    
-
-                      
                     }
                   });
-
-                  
-    
 
                   popup
                     .setLngLat(coordinates)
@@ -2493,8 +2507,8 @@ const Home: NextPage = () => {
               "line-opacity": 1,
               "line-width": 3,
             },
-          },
-        //  "road-label"
+          }
+          //  "road-label"
         );
 
         map.addSource("citycouncildist", {
@@ -2812,7 +2826,6 @@ const Home: NextPage = () => {
                   >
                     Discounted/Free/Shelter
                   </button>
- 
                 </div>
                 <div className="flex flex-col">
                   {selectedfilteropened === "race" && (
@@ -2822,9 +2835,17 @@ const Home: NextPage = () => {
                           className="align-middle bg-gray-800 rounded-lg px-1  border border-gray-400 text-sm md:text-base"
                           onClick={() => {
                             setfilteredracepre(filterableraceskeys);
-                                           
-                            mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Free', 'Shelter']]  );
-                           
+
+                            mapref.current.setFilter("park-volcanoes", [
+                              "all",
+                              [
+                                "in",
+                                "Discounted/Free/Shelter",
+                                "Discounted",
+                                "Free",
+                                "Shelter",
+                              ],
+                            ]);
                           }}
                         >
                           Select All
@@ -2833,13 +2854,15 @@ const Home: NextPage = () => {
                           className="align-middle bg-gray-800 rounded-lg px-1 text-sm md:text-base border border-gray-400"
                           onClick={() => {
                             setfilteredracepre([]);
-                            mapref.current.setFilter('park-volcanoes', ['==', ["get", "Discounted/Free/Shelter",], 'ABC']  );
-                         
+                            mapref.current.setFilter("park-volcanoes", [
+                              "==",
+                              ["get", "Discounted/Free/Shelter"],
+                              "ABC",
+                            ]);
                           }}
                         >
                           Unselect All
                         </button>
-                 
                       </div>
                       <div className="flex flex-row gap-x-1">
                         <div className="flex items-center">
@@ -2855,7 +2878,7 @@ const Home: NextPage = () => {
                               {Object.entries(filterableraces).map(
                                 (eachEntry) => (
                                   <Checkbox
-                                  id={eachEntry[0]}
+                                    id={eachEntry[0]}
                                     value={eachEntry[0]}
                                     label={
                                       <span className="text-nowrap text-xs">
@@ -2868,42 +2891,191 @@ const Home: NextPage = () => {
                                       </span>
                                     }
                                     key={eachEntry[0]}
-                                    onClick={(e)=>{
+                                    onClick={(e) => {
+                                      // debugger
+                                      const f = document.getElementById(
+                                        "f"
+                                      ) as HTMLInputElement;
+                                      const d = document.getElementById(
+                                        "d"
+                                      ) as HTMLInputElement;
+                                      const s = document.getElementById(
+                                        "s"
+                                      ) as HTMLInputElement;
 
-                                     // debugger
-                                     const f = document.getElementById('f') as HTMLInputElement;
-const d = document.getElementById('d') as HTMLInputElement;
-const s = document.getElementById('s') as HTMLInputElement;
-
-if(d.checked === true  && f.checked === true && s.checked === true){               
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Free', 'Shelter']]  );
-} else if(d.checked === false  && f.checked === false && s.checked === false){
-  mapref.current.setFilter('park-volcanoes', ['==', ["get", "Discounted/Free/Shelter",], 'ABC']  );
-} else if(d.checked === false  && f.checked === true && s.checked === true){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free', 'Shelter']]  );
-} else if(d.checked === true  && f.checked ===false  && s.checked === true){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Shelter']]  );
-} else if(d.checked === true  && f.checked ===true  && s.checked === false){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Free']]  );
-} else if(d.checked === false  && f.checked === false && s.checked === true){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Shelter']]  );
-} else if(d.checked === true  && f.checked ===false  && s.checked === false){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted']]  );
-} else if(d.checked === false  && f.checked ===true  && s.checked === false){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free']]  );
-} else if(d.checked){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted']]  );
-} else if(f.checked){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free']]  );
-} else if(s.checked === true){
-  mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Shelter']]  );
-}
+                                      if (
+                                        d.checked === true &&
+                                        f.checked === true &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                              "Free",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === false &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "==",
+                                            ["get", "Discounted/Free/Shelter"],
+                                            "ABC",
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === true &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Free",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === true &&
+                                        f.checked === false &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === true &&
+                                        f.checked === true &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                              "Free",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === false &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === true &&
+                                        f.checked === false &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === true &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Free",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (d.checked) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (f.checked) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Free",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (s.checked === true) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      }
 
                                       // const d = document.getElementById("Discounted")
                                       // const f = document.getElementById("Free")
                                       // const s = document.getElementById("Shelter")
                                       // console.log(f.checked)
-                                      // if(d.checked === true  && f.checked === true && s.checked === true){               
+                                      // if(d.checked === true  && f.checked === true && s.checked === true){
                                       //   mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Free', 'Shelter']]  );
                                       // }else if(d.checked === false  && f.checked === false && s.checked === false){
                                       //   mapref.current.setFilter('park-volcanoes', ['==', ["get", "Discounted/Free/Shelter",], 'ABC']  );
@@ -2948,10 +3120,8 @@ if(d.checked === true  && f.checked === true && s.checked === true){
 
                                       //   }
                                       // }
-                                        // mapref.current.setFilter('park-volcanoes', ['==', ['get', 'Discounted/Free/Shelter'], 'Shelter' ]);
-                                      }
-                                      }
-                      
+                                      // mapref.current.setFilter('park-volcanoes', ['==', ['get', 'Discounted/Free/Shelter'], 'Shelter' ]);
+                                    }}
                                   />
                                 )
                               )}
@@ -2959,7 +3129,6 @@ if(d.checked === true  && f.checked === true && s.checked === true){
                           </Checkbox.Group>
                         </div>{" "}
                       </div>{" "}
-              
                     </div>
                   )}
                   {selectedfilteropened === "cd" && (
@@ -3091,7 +3260,7 @@ if(d.checked === true  && f.checked === true && s.checked === true){
               className={`absolute md:mx-auto z-9 bottom-2 left-1 md:left-1/2 md:transform md:-translate-x-1/2`}
             >
               <a
-                href="https://controller.lacontroller.gov/"
+                href="https://controller.lacity.gov/"
                 target="_blank"
                 rel="noreferrer"
               >

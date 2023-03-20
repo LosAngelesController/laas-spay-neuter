@@ -2492,6 +2492,7 @@ const Home: NextPage = () => {
       }
 
       checkHideOrShowTopRightGeocoder();
+      
 
       if (true) {
         map.addLayer(
@@ -2503,11 +2504,12 @@ const Home: NextPage = () => {
               data: citybounds,
             },
             paint: {
-              "fill-color": "#dddddd",
-              "fill-opacity": 0.3,
-              // "line-color": "#dddddd",
-              // "line-opacity": 1,
-              // "line-width": 3,
+             "fill-color": "#dddddd",
+             "fill-opacity": 0.3,
+          
+              //  "line-color": "#dddddd",
+              //  "line-opacity": 1,
+              //  "line-width": 2,
             },
           },
           "waterway-label"

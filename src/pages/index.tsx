@@ -2043,24 +2043,46 @@ const Home: NextPage = () => {
 
                       return `
                       <li class="leading-none my-1">
-                        <div class="location">${eachdeath.properties["Location"] || "N/A"}</div>
+                        <div class="location">${
+                          eachdeath.properties["Location"] || "N/A"
+                        }</div>
                         <div class="address">
-                          <span>${eachdeath.properties["Address"] || "N/A"}</span><br>
-                          <span>${eachdeath.properties["City"] || "N/A"}</span>, 
+                          <span>${
+                            eachdeath.properties["Address"] || "N/A"
+                          }</span><br>
+                          <span>${
+                            eachdeath.properties["City"] || "N/A"
+                          }</span>, 
                           <span>${eachdeath.properties["ZIP"] || "N/A"}</span>
                         </div>
-                        <div class="phone">Phone: ${eachdeath.properties["Phone Number"] || "N/A"}</div>
-                        <div class="vet">Vet: ${eachdeath.properties["Veterinarian"] || "N/A"}</div>
+                        <div class="phone">Phone: ${
+                          eachdeath.properties["Phone Number"] || "N/A"
+                        }</div>
+                        <div class="vet">Vet: ${
+                          eachdeath.properties["Veterinarian"] || "N/A"
+                        }</div>
                         <div class="animals">
-                          <span>Cat S/N: ${eachdeath.properties["Cat S/N"] || "N/A"}</span><br>
-                          <span>Dog S/N: ${eachdeath.properties["Dog S/N"] || "N/A"}</span><br>
-                          <span>Rabbit S/N: ${eachdeath.properties["Rabbit S/N"] || "N/A"}</span><br>
-                          <span>Community Cat Program: ${eachdeath.properties["Community Cat Program data"] || "N/A"}</span>
+                          <span>Cat S/N: ${
+                            eachdeath.properties["Cat S/N"] || "N/A"
+                          }</span><br>
+                          <span>Dog S/N: ${
+                            eachdeath.properties["Dog S/N"] || "N/A"
+                          }</span><br>
+                          <span>Rabbit S/N: ${
+                            eachdeath.properties["Rabbit S/N"] || "N/A"
+                          }</span><br>
+                          <span>Community Cat Program: ${
+                            eachdeath.properties[
+                              "Community Cat Program data"
+                            ] || "N/A"
+                          }</span>
                         </div>
-                        <div class="discounted">Discounted/Free/Shelter: ${eachdeath.properties["Discounted/Free/Shelter"] || "N/A"}</div>
+                        <div class="discounted">Discounted/Free/Shelter: ${
+                          eachdeath.properties["Discounted/Free/Shelter"] ||
+                          "N/A"
+                        }</div>
                       </li>
                     `;
-                    
                     }
                   });
 
@@ -2475,19 +2497,39 @@ const Home: NextPage = () => {
         map.addLayer(
           {
             id: "citybound",
-            type: "line",
+            type: "fill",
             source: {
               type: "geojson",
               data: citybounds,
             },
             paint: {
-              "line-color": "#dddddd",
-              "line-opacity": 1,
-              "line-width": 3,
+              "fill-color": "#dddddd",
+              "fill-opacity": 0.3,
+              // "line-color": "#dddddd",
+              // "line-opacity": 1,
+              // "line-width": 3,
             },
           },
-          "road-label"
+          "waterway-label"
         );
+
+        // if (true) {
+        //   map.addLayer(
+        //     {
+        //       id: "citybound",
+        //       type: "line",
+        //       source: {
+        //         type: "geojson",
+        //         data: citybounds,
+        //       },
+        //       paint: {
+        //         "line-color": "#dddddd",
+        //         "line-opacity": 1,
+        //         "line-width": 3,
+        //       },
+        //     },
+        // //  "road-label"
+        //   );
 
         map.addSource("citycouncildist", {
           type: "geojson",
@@ -2870,78 +2912,188 @@ const Home: NextPage = () => {
                                     }
                                     key={eachEntry[0]}
                                     onClick={(e) => {
-                                     // debugger;
-                                     const d = document.getElementById("Discounted") as HTMLInputElement;
-const f = document.getElementById("Free") as HTMLInputElement;
-const s = document.getElementById("Shelter") as HTMLInputElement;
+                                      // debugger;
+                                      const d = document.getElementById(
+                                        "Discounted"
+                                      ) as HTMLInputElement;
+                                      const f = document.getElementById(
+                                        "Free"
+                                      ) as HTMLInputElement;
+                                      const s = document.getElementById(
+                                        "Shelter"
+                                      ) as HTMLInputElement;
 
-console.log(f.checked);
+                                      console.log(f.checked);
 
-if (d.checked === true && f.checked === true && s.checked === true) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    [
-      "in",
-      "Discounted/Free/Shelter",
-      "Discounted",
-      "Free",
-      "Shelter",
-    ],
-  ]);
-} else if (d.checked === false && f.checked === false && s.checked === false) {
-  mapref.current.setFilter("park-volcanoes", [
-    "==",
-    ["get", "Discounted/Free/Shelter"],
-    "ABC",
-  ]);
-} else if (d.checked === false && f.checked === true && s.checked === true) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Free", "Shelter"],
-  ]);
-} else if (d.checked === true && f.checked === false && s.checked === true) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Discounted", "Shelter"],
-  ]);
-} else if (d.checked === true && f.checked === true && s.checked === false) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Discounted", "Free"],
-  ]);
-} else if (d.checked === false && f.checked === false && s.checked === true) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Shelter"],
-  ]);
-} else if (d.checked === true && f.checked === false && s.checked === false) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Discounted"],
-  ]);
-} else if (d.checked === false && f.checked === true && s.checked === false) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Free"],
-  ]);
-} else if (d.checked) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Discounted"],
-  ]);
-} else if (f.checked) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Free"],
-  ]);
-} else if (s.checked === true) {
-  mapref.current.setFilter("park-volcanoes", [
-    "all",
-    ["in", "Discounted/Free/Shelter", "Shelter"],
-  ]);
-}
+                                      if (
+                                        d.checked === true &&
+                                        f.checked === true &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                              "Free",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === false &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "==",
+                                            ["get", "Discounted/Free/Shelter"],
+                                            "ABC",
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === true &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Free",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === true &&
+                                        f.checked === false &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === true &&
+                                        f.checked === true &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                              "Free",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === false &&
+                                        s.checked === true
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === true &&
+                                        f.checked === false &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (
+                                        d.checked === false &&
+                                        f.checked === true &&
+                                        s.checked === false
+                                      ) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Free",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (d.checked) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Discounted",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (f.checked) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Free",
+                                            ],
+                                          ]
+                                        );
+                                      } else if (s.checked === true) {
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
+                                      }
 
-                                    /*  const d =
+                                      /*  const d =
                                         document.getElementById("Discounted");
                                       const f = document.getElementById("Free");
                                       const s =

@@ -605,23 +605,23 @@ const Home: NextPage = () => {
                 "Discounted/Free/Shelter": "Discounted",
               },
             },
-            {
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [-118.081072, 33.9133666],
-              },
-              properties: {
-                Location: "AM PM Ideal Pet Care",
-                Address: "12852 Pioneer Blvd",
-                City: "Norwalk",
-                ZIP: 90650,
-                "Phone Number": "562-282-9639",
+            // {
+            //   type: "Feature",
+            //   geometry: {
+            //     type: "Point",
+            //     coordinates: [-118.081072, 33.9133666],
+            //   },
+            //   properties: {
+            //     Location: "AM PM Ideal Pet Care",
+            //     Address: "12852 Pioneer Blvd",
+            //     City: "Norwalk",
+            //     ZIP: 90650,
+            //     "Phone Number": "562-282-9639",
 
-                "Community Cat Program": "Yes",
-                "Discounted/Free/Shelter": "Discounted",
-              },
-            },
+            //     "Community Cat Program": "Yes",
+            //     "Discounted/Free/Shelter": "Discounted",
+            //   },
+            // },
             {
               type: "Feature",
               geometry: {
@@ -662,46 +662,46 @@ const Home: NextPage = () => {
                 "Discounted/Free/Shelter": "Discounted",
               },
             },
-            {
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [-118.3086626, 33.897106],
-              },
-              properties: {
-                Location: "Amazing Small Animal Practice",
-                Address: "14800 S Western Ave STE 102",
-                City: "Gardena",
-                ZIP: 90249,
-                "Phone Number": "310-908-0510",
+            // {
+            //   type: "Feature",
+            //   geometry: {
+            //     type: "Point",
+            //     coordinates: [-118.3086626, 33.897106],
+            //   },
+            //   properties: {
+            //     Location: "Amazing Small Animal Practice",
+            //     Address: "14800 S Western Ave STE 102",
+            //     City: "Gardena",
+            //     ZIP: 90249,
+            //     "Phone Number": "310-908-0510",
 
-                "Cat S/N": "Yes",
-                "Dog S/N": "Yes",
-                "Rabbit S/N": "Yes",
-                "Community Cat Program": "Yes",
-                "Discounted/Free/Shelter": "Discounted",
-              },
-            },
-            {
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [-118.3086626, 33.897106],
-              },
-              properties: {
-                Location: "Amazing Small Animal Practice",
-                Address: "14800 S. Western Ave STE 102",
-                City: "Gardena",
-                ZIP: 90249,
-                "Phone Number": "310-908-0510",
+            //     "Cat S/N": "Yes",
+            //     "Dog S/N": "Yes",
+            //     "Rabbit S/N": "Yes",
+            //     "Community Cat Program": "Yes",
+            //     "Discounted/Free/Shelter": "Discounted",
+            //   },
+            // },
+            // {
+            //   type: "Feature",
+            //   geometry: {
+            //     type: "Point",
+            //     coordinates: [-118.3086626, 33.897106],
+            //   },
+            //   properties: {
+            //     Location: "Amazing Small Animal Practice",
+            //     Address: "14800 S. Western Ave STE 102",
+            //     City: "Gardena",
+            //     ZIP: 90249,
+            //     "Phone Number": "310-908-0510",
 
-                "Cat S/N": "Yes",
-                "Dog S/N": "Yes",
-                "Rabbit S/N": "Yes",
-                "Community Cat Program": "Yes",
-                "Discounted/Free/Shelter": "Free",
-              },
-            },
+            //     "Cat S/N": "Yes",
+            //     "Dog S/N": "Yes",
+            //     "Rabbit S/N": "Yes",
+            //     "Community Cat Program": "Yes",
+            //     "Discounted/Free/Shelter": "Free",
+            //   },
+            // },
             {
               type: "Feature",
               geometry: {
@@ -1697,46 +1697,46 @@ const Home: NextPage = () => {
                 "Discounted/Free/Shelter": "Free",
               },
             },
-            {
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [-118.053621, 34.0510163],
-              },
-              properties: {
-                Location: "Stray Paws Animal Haven",
-                Address: "9858 Rush St",
-                City: "El Monte",
-                ZIP: 91733,
-                "Phone Number": "818 968-7150",
+            // {
+            //   type: "Feature",
+            //   geometry: {
+            //     type: "Point",
+            //     coordinates: [-118.053621, 34.0510163],
+            //   },
+            //   properties: {
+            //     Location: "Stray Paws Animal Haven",
+            //     Address: "9858 Rush St",
+            //     City: "El Monte",
+            //     ZIP: 91733,
+            //     "Phone Number": "818 968-7150",
 
-                "Cat S/N": "Yes",
-                "Dog S/N": "Yes",
-                "Rabbit S/N": "No",
-                "Community Cat Program": "Yes",
-                "Discounted/Free/Shelter": "Discounted",
-              },
-            },
-            {
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [-118.053621, 34.0510163],
-              },
-              properties: {
-                Location: "Stray Paws Animal Haven",
-                Address: "9858 Rush St",
-                City: "El Monte",
-                ZIP: 91733,
-                "Phone Number": "818 968-7150",
+            //     "Cat S/N": "Yes",
+            //     "Dog S/N": "Yes",
+            //     "Rabbit S/N": "No",
+            //     "Community Cat Program": "Yes",
+            //     "Discounted/Free/Shelter": "Discounted",
+            //   },
+            // },
+            // {
+            //   type: "Feature",
+            //   geometry: {
+            //     type: "Point",
+            //     coordinates: [-118.053621, 34.0510163],
+            //   },
+            //   properties: {
+            //     Location: "Stray Paws Animal Haven",
+            //     Address: "9858 Rush St",
+            //     City: "El Monte",
+            //     ZIP: 91733,
+            //     "Phone Number": "818 968-7150",
 
-                "Cat S/N": "Yes",
-                "Dog S/N": "Yes",
-                "Rabbit S/N": "No",
-                "Community Cat Program": "Yes",
-                "Discounted/Free/Shelter": "Free",
-              },
-            },
+            //     "Cat S/N": "Yes",
+            //     "Dog S/N": "Yes",
+            //     "Rabbit S/N": "No",
+            //     "Community Cat Program": "Yes",
+            //     "Discounted/Free/Shelter": "Free",
+            //   },
+            // },
             {
               type: "Feature",
               geometry: {
@@ -1777,46 +1777,46 @@ const Home: NextPage = () => {
                 "Discounted/Free/Shelter": "Free",
               },
             },
-            {
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [-118.7650657, 34.1459566],
-              },
-              properties: {
-                Location: "Veterinary Angels",
-                Address: "29348 Roadside DR",
-                City: "Agoura Hills",
-                ZIP: 91301,
-                "Phone Number": "818 865-1800",
+            // {
+            //   type: "Feature",
+            //   geometry: {
+            //     type: "Point",
+            //     coordinates: [-118.7650657, 34.1459566],
+            //   },
+            //   properties: {
+            //     Location: "Veterinary Angels",
+            //     Address: "29348 Roadside DR",
+            //     City: "Agoura Hills",
+            //     ZIP: 91301,
+            //     "Phone Number": "818 865-1800",
 
-                "Cat S/N": "Yes",
-                "Dog S/N": "Yes",
-                "Rabbit S/N": "Yes",
-                "Community Cat Program": "Yes",
-                "Discounted/Free/Shelter": "Discounted",
-              },
-            },
-            {
-              type: "Feature",
-              geometry: {
-                type: "Point",
-                coordinates: [-118.7650657, 34.1459566],
-              },
-              properties: {
-                Location: "Veterinary Angels",
-                Address: "29348 Roadside DR",
-                City: "Agoura Hills",
-                ZIP: 91301,
-                "Phone Number": "818 865-1800",
+            //     "Cat S/N": "Yes",
+            //     "Dog S/N": "Yes",
+            //     "Rabbit S/N": "Yes",
+            //     "Community Cat Program": "Yes",
+            //     "Discounted/Free/Shelter": "Discounted",
+            //   },
+            // },
+            // {
+            //   type: "Feature",
+            //   geometry: {
+            //     type: "Point",
+            //     coordinates: [-118.7650657, 34.1459566],
+            //   },
+            //   properties: {
+            //     Location: "Veterinary Angels",
+            //     Address: "29348 Roadside DR",
+            //     City: "Agoura Hills",
+            //     ZIP: 91301,
+            //     "Phone Number": "818 865-1800",
 
-                "Cat S/N": "Yes",
-                "Dog S/N": "Yes",
-                "Rabbit S/N": "Yes",
-                "Community Cat Program": "Yes",
-                "Discounted/Free/Shelter": "Free",
-              },
-            },
+            //     "Cat S/N": "Yes",
+            //     "Dog S/N": "Yes",
+            //     "Rabbit S/N": "Yes",
+            //     "Community Cat Program": "Yes",
+            //     "Discounted/Free/Shelter": "Free",
+            //   },
+            // },
             {
               type: "Feature",
               geometry: {

@@ -27,6 +27,8 @@ import CouncilDist from "./CouncilDistricts.json";
 import { auth, signInWithGoogle, signOutOfApp } from "./../components/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
+import shelterImage from './dog.png';
+
 const councildistricts = require("./CouncilDistricts.json");
 const citybounds = require("./citybounds.json");
 // @ts-ignore: Unreachable code error
@@ -51,6 +53,8 @@ function getLang() {
   if (navigator.languages != undefined) return navigator.languages[0];
   return navigator.language;
 }
+
+ 
 
 var councilareasdistrict: any = {
   "1": 39172374.513557486,
@@ -130,6 +134,8 @@ const Home: NextPage = () => {
     features: CouncilDist.features,
     type: "FeatureCollection",
   };
+
+
 
   const calculateifboxisvisible = () => {
     if (typeof window != "undefined") {
@@ -1130,6 +1136,7 @@ const Home: NextPage = () => {
                 "Phone Number": "888 452-7381",
 
                 "Discounted/Free/Shelter": "Shelter",
+                ImageUrl: "https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/dog.png?alt=media&token=1de741dd-8ead-4fd7-a281-01b662cd16b5"
               },
             },
             {
@@ -1246,6 +1253,7 @@ const Home: NextPage = () => {
                 "Phone Number": "888 452-7381",
 
                 "Discounted/Free/Shelter": "Shelter",
+                ImageUrl: "https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/dog.png?alt=media&token=1de741dd-8ead-4fd7-a281-01b662cd16b5",
               },
             },
             {
@@ -1462,6 +1470,7 @@ const Home: NextPage = () => {
                 "Phone Number": "888 452-7381",
 
                 "Discounted/Free/Shelter": "Shelter",
+                ImageUrl: "https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/dog.png?alt=media&token=1de741dd-8ead-4fd7-a281-01b662cd16b5",
               },
             },
             {
@@ -1539,6 +1548,7 @@ const Home: NextPage = () => {
                 Veterinarian: "",
 
                 "Discounted/Free/Shelter": "Shelter",
+                ImageUrl: "https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/dog.png?alt=media&token=1de741dd-8ead-4fd7-a281-01b662cd16b5",
               },
             },
             {
@@ -1655,6 +1665,8 @@ const Home: NextPage = () => {
                 "Phone Number": "888 452-7381",
 
                 "Discounted/Free/Shelter": "Shelter",
+                ImageUrl: "https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/dog.png?alt=media&token=1de741dd-8ead-4fd7-a281-01b662cd16b5",
+
               },
             },
             {
@@ -1831,6 +1843,8 @@ const Home: NextPage = () => {
                 "Phone Number": "888 452-7381",
 
                 "Discounted/Free/Shelter": "Shelter",
+                ImageUrl: "https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/dog.png?alt=media&token=1de741dd-8ead-4fd7-a281-01b662cd16b5",
+
               },
             },
             {
@@ -1847,6 +1861,7 @@ const Home: NextPage = () => {
                 "Phone Number": "888 452-7381",
 
                 "Discounted/Free/Shelter": "Shelter",
+                 ImageUrl: "https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/dog.png?alt=media&token=1de741dd-8ead-4fd7-a281-01b662cd16b5",
               },
             },
             {
@@ -1937,6 +1952,8 @@ const Home: NextPage = () => {
         },
       });
 
+ 
+
       map.addLayer({
         id: "park-volcanoes",
         type: "circle",
@@ -1980,6 +1997,36 @@ const Home: NextPage = () => {
         layout: {},
       });
 
+      map.loadImage(
+        '/dog512.png',
+        (error, image:any) => {
+          if (error) throw error;
+
+          console.log('Image loaded successfully');
+         
+        // Add the image to the map style.
+        map.addImage('superdog', image);
+        
+        map.addLayer({
+          id: 'littledogs',
+          type: 'symbol',
+          source: 'dogparks',
+          layout: { 
+            'icon-image': 'superdog',
+            'icon-size': [
+              "interpolate", ["linear"], ["zoom"],
+              // zoom is 10 (or greater) -
+              7, 0.1,
+              10, 0.1,
+              20, 0.2
+          ],
+            'icon-rotate': 0,
+            'icon-allow-overlap': true
+          }
+      
+          });
+
+        });
       //create mousedown trigger
       map.on("mousedown", "park-volcanoes", (e) => {
         console.log("mousedown", e, e.features);
@@ -2036,55 +2083,73 @@ const Home: NextPage = () => {
                   //   filteredfeatures[0].properties;
                   console.log("filteredfeatures", filteredfeatures);
 
+                   
                   const allthelineitems = filteredfeatures.map((eachdeath) => {
                     if (eachdeath.properties) {
-                      // const address = eachdeath.properties["Address"];
-                      console.log("filteredfeatures", filteredfeatures);
-
+                      let address = eachdeath.properties["Address"];
+                      if (address === "N/A") {
+                        address = "";
+                      }
+                      let city = eachdeath.properties["City"];
+                      if (city === "N/A") {
+                        city = "";
+                      }
+                      let zip = eachdeath.properties["ZIP"];
+                      if (zip === "N/A") {
+                        zip = "";
+                      }
+                      let phone = eachdeath.properties["Phone Number"];
+                      if (phone === "N/A") {
+                        phone = "";
+                      }
+                      let vet = eachdeath.properties["Veterinarian"];
+                      if (vet === "N/A") {
+                        vet = "";
+                      }
+                      let catSN = eachdeath.properties["Cat S/N"];
+                      if (catSN === "N/A") {
+                        catSN = "";
+                      }
+                      let dogSN = eachdeath.properties["Dog S/N"];
+                      if (dogSN === "N/A") {
+                        dogSN = "";
+                      }
+                      let rabbitSN = eachdeath.properties["Rabbit S/N"];
+                      if (rabbitSN === "N/A") {
+                        rabbitSN = "";
+                      }
+                      let ccp = eachdeath.properties["Community Cat Program data"];
+                      if (ccp === "N/A") {
+                        ccp = "";
+                      }
+                      let dfs = eachdeath.properties["Discounted/Free/Shelter"];
+                      if (dfs === "N/A") {
+                        dfs = "";
+                      }
+                  
+                      // Include only values that are not "N/A"
                       return `
-                      <li class="leading-none my-1">
-                        <div class="location">${
-                          eachdeath.properties["Location"] || "N/A"
-                        }</div>
-                        <div class="address">
-                          <span>${
-                            eachdeath.properties["Address"] || "N/A"
-                          }</span><br>
-                          <span>${
-                            eachdeath.properties["City"] || "N/A"
-                          }</span>, 
-                          <span>${eachdeath.properties["ZIP"] || "N/A"}</span>
-                        </div>
-                        <div class="phone">Phone: ${
-                          eachdeath.properties["Phone Number"] || "N/A"
-                        }</div>
-                        <div class="vet">Vet: ${
-                          eachdeath.properties["Veterinarian"] || "N/A"
-                        }</div>
-                        <div class="animals">
-                          <span>Cat S/N: ${
-                            eachdeath.properties["Cat S/N"] || "N/A"
-                          }</span><br>
-                          <span>Dog S/N: ${
-                            eachdeath.properties["Dog S/N"] || "N/A"
-                          }</span><br>
-                          <span>Rabbit S/N: ${
-                            eachdeath.properties["Rabbit S/N"] || "N/A"
-                          }</span><br>
-                          <span>Community Cat Program: ${
-                            eachdeath.properties[
-                              "Community Cat Program data"
-                            ] || "N/A"
-                          }</span>
-                        </div>
-                        <div class="discounted">Discounted/Free/Shelter: ${
-                          eachdeath.properties["Discounted/Free/Shelter"] ||
-                          "N/A"
-                        }</div>
-                      </li>
-                    `;
+                        <li class="leading-none my-1">
+                          <div class="location">${eachdeath.properties["Location"] || ""}</div>
+                          <div class="address">
+                            ${address ? `<span>${address}</span><br>` : ""}
+                            ${city ? `<span>${city}</span>, ` : ""}
+                            ${zip ? `<span>${zip}</span>` : ""}
+                          </div>
+                          ${phone ? `<div class="phone">Phone: ${phone}</div>` : ""}
+                          ${vet ? `<div class="vet">Vet: ${vet}</div>` : ""}
+                          <div class="animals">
+                            ${catSN ? `<span>Cat S/N: ${catSN}</span><br>` : ""}
+                            ${dogSN ? `<span>Dog S/N: ${dogSN}</span><br>` : ""}
+                            ${rabbitSN ? `<span>Rabbit S/N: ${rabbitSN}</span><br>` : ""}
+                            ${ccp ? `<span>Community Cat Program: ${ccp}</span>` : ""}
+                          </div>
+                          ${dfs ? `<div class="discounted">Discounted/Free/Shelter: ${dfs}</div>` : ""}
+                        </li>
+                      `;
                     }
                   });
+                  
 
                   popup
                     .setLngLat(coordinates)
@@ -2498,18 +2563,18 @@ const Home: NextPage = () => {
         map.addLayer(
           {
             id: "citybound",
-            type: "fill",
+            type: "line",
             source: {
               type: "geojson",
               data: citybounds,
             },
             paint: {
-             "fill-color": "#dddddd",
-             "fill-opacity": 0.3,
+            // "fill-color": "#dddddd",
+            // "fill-opacity": 0.3,
           
-              //  "line-color": "#dddddd",
-              //  "line-opacity": 1,
-              //  "line-width": 2,
+               "line-color": "#dddddd",
+               "line-opacity": 1,
+               "line-width": 2,
             },
           },
           "waterway-label"
@@ -2532,6 +2597,8 @@ const Home: NextPage = () => {
         //     },
         // //  "road-label"
         //   );
+
+        
 
         map.addSource("citycouncildist", {
           type: "geojson",
@@ -3082,6 +3149,7 @@ const Home: NextPage = () => {
                                           ]
                                         );
                                       } else if (s.checked === true) {
+                                         
                                         mapref.current.setFilter(
                                           "park-volcanoes",
                                           [
@@ -3094,209 +3162,16 @@ const Home: NextPage = () => {
                                           ]
                                         );
                                       }
-
-                                      /*  const d =
-                                        document.getElementById("Discounted");
-                                      const f = document.getElementById("Free");
-                                      const s =
-                                        document.getElementById("Shelter");
-                                        
-                                      console.log(f.checked);
-                                      if (
-                                        d.checked === true &&
-                                        f.checked === true &&
-                                        s.checked === true
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Discounted",
-                                              "Free",
-                                              "Shelter",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (
-                                        d.checked === false &&
-                                        f.checked === false &&
-                                        s.checked === false
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "==",
-                                            ["get", "Discounted/Free/Shelter"],
-                                            "ABC",
-                                          ]
-                                        );
-                                      } else if (
-                                        d.checked === false &&
-                                        f.checked === true &&
-                                        s.checked === true
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Free",
-                                              "Shelter",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (
-                                        d.checked === true &&
-                                        f.checked === false &&
-                                        s.checked === true
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Discounted",
-                                              "Shelter",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (
-                                        d.checked === true &&
-                                        f.checked === true &&
-                                        s.checked === false
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Discounted",
-                                              "Free",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (
-                                        d.checked === false &&
-                                        f.checked === false &&
-                                        s.checked === true
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Shelter",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (
-                                        d.checked === true &&
-                                        f.checked === false &&
-                                        s.checked === false
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Discounted",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (
-                                        d.checked === false &&
-                                        f.checked === true &&
-                                        s.checked === false
-                                      ) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Free",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (d.checked) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Discounted",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (f.checked) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Free",
-                                            ],
-                                          ]
-                                        );
-                                      } else if (s.checked === true) {
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Shelter",
-                                            ],
-                                          ]
-                                        );
-                                      }*/
-                                      // if(eachEntry[0] == "Discounted"){
-                                      //   if(!e.target.checked){
-                                      //     mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free', 'Shelter']]  );
-                                      //   }else{
-                                      //     mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted']]  );
-
-                                      //   }
-                                      // }else if(eachEntry[0] == "Free"){
-                                      //   if(!e.target.checked){
-                                      //     mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Shelter']]  );
-                                      //   }else{
-                                      //     mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Free']]  );
-
-                                      //   }
-                                      // }else if(eachEntry[0] == "Shelter"){
-                                      //   if(e.target.checked){
-                                      //     mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Discounted', 'Free']]  );
-                                      //   }else{
-                                      //     mapref.current.setFilter('park-volcanoes', ['all', ["in", "Discounted/Free/Shelter", 'Shelter']]  );
-
-                                      //   }
-                                      // }
-                                      // mapref.current.setFilter('park-volcanoes', ['==', ['get', 'Discounted/Free/Shelter'], 'Shelter' ]);
-                                    }}
+                                   
+                            
+                                     }}
                                   />
+                                  
                                 )
                               )}
+               
                             </div>
+                            
                           </Checkbox.Group>
                         </div>{" "}
                       </div>{" "}
@@ -3356,6 +3231,7 @@ const Home: NextPage = () => {
                             />
                           ))}
                         </div>
+                        
                       </Checkbox.Group>
                     </div>
                   )}
@@ -3373,18 +3249,26 @@ const Home: NextPage = () => {
    `
                     : "hidden"
                 }  ${
+                  
                   typeof window != "undefined"
                     ? `${
                         window.innerHeight < 1200 && window.innerWidth >= 500
                           ? "max-h-96"
                           : "max-h-[500px]"
                       }
-                      
+                     
                       ${window.innerWidth < 500 ? "max-h-48 text-xs" : ""}
                       `
                     : ""
                 }`}
+                
+              
               >
+                
+ 
+ 
+
+
                 <CloseButton
                   onClose={() => {
                     setshelterselected(null);
@@ -3407,6 +3291,7 @@ const Home: NextPage = () => {
                     }
                   }}
                 />
+  
               </div>
             </div>
           </div>

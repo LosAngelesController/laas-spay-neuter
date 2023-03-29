@@ -1911,8 +1911,6 @@ const Home: NextPage = () => {
           },
         });
 
-    
-
         map.setFilter("deathslayer", [
           "==",
           ["get", "Discounted/Free/Shelter"],
@@ -1990,7 +1988,6 @@ const Home: NextPage = () => {
           layout: {},
         });
 
- 
         //create mousedown trigger
         map.on("mousedown", "park-volcanoes", (e) => {
           console.log("mousedown", e, e.features);
@@ -3181,7 +3178,13 @@ const Home: NextPage = () => {
                         </div>{" "}
                       </div>{" "}
                       <p className="text-gray-200 text-xs">
-                       Source: <a href="https://www.laanimalservices.com/spay-and-neuter" target="_blank">L.A. Animal Service | Spay and Neuter</a>
+                        Source:{" "}
+                        <a
+                          href="https://www.laanimalservices.com/spay-and-neuter"
+                          target="_blank"
+                        >
+                          L.A. Animal Services | Spay and Neuter
+                        </a>
                       </p>
                     </div>
                   )}

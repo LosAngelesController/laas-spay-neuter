@@ -14,7 +14,7 @@ import { getAuth, signInWithCustomToken } from "firebase/auth";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import MapboxLanguage from "@mapbox/mapbox-gl-language";
 import Nav from "../components/nav";
- 
+
 import { MantineProvider, Checkbox } from "@mantine/core";
 import React, { useEffect, useState, useRef } from "react";
 import { initializeApp } from "firebase/app";
@@ -52,8 +52,6 @@ function getLang() {
   return navigator.language;
 }
 
- 
-
 const filterableraces: any = {
   Discounted: 39,
   Free: 22,
@@ -61,8 +59,6 @@ const filterableraces: any = {
 };
 
 const filterableraceskeys = Object.keys(filterableraces);
-
- 
 
 const Home: NextPage = () => {
   var councilBounds: any = {
@@ -78,29 +74,25 @@ const Home: NextPage = () => {
     }
   };
 
-  
-
   const listofcouncildists = Array.from({ length: 15 }, (_, i) => i + 1).map(
     (eachItem) => String(eachItem)
   );
 
- 
-
   const shouldfilteropeninit =
     typeof window != "undefined" ? window.innerWidth >= 640 : false;
   const [showtotalarea, setshowtotalarea] = useState(false);
- 
+
   var mapref: any = useRef(null);
   const okaydeletepoints: any = useRef(null);
- 
+
   const [doneloadingmap, setdoneloadingmap] = useState(false);
- 
+
   const [selectedfilteropened, setselectedfilteropened] = useState("race");
- 
+
   const [filteredraces, setfilteredraces] = useState<string[]>(
     Object.entries(filterableraces).map((eachrace) => eachrace[0])
   );
- 
+
   const [filterpanelopened, setfilterpanelopened] =
     useState(shouldfilteropeninit);
 
@@ -115,15 +107,8 @@ const Home: NextPage = () => {
     }
   };
 
- 
-
   const [shelterselected, setshelterselected] = useState<any>(null);
 
- 
-
- 
-
- 
   function turfify(polygon: any) {
     var turffedpolygon;
 
@@ -196,7 +181,7 @@ const Home: NextPage = () => {
         }
       }
     }
-  }, [ filteredraces]);
+  }, [filteredraces]);
 
   function checkHideOrShowTopRightGeocoder() {
     var toprightbox = document.querySelector(".mapboxgl-ctrl-top-right");
@@ -226,16 +211,12 @@ const Home: NextPage = () => {
 
   const divRef: any = React.useRef<HTMLDivElement>(null);
 
-  
-
   useEffect(() => {
     console.log("map div", divRef);
 
     if (divRef.current) {
       console.log("app render");
     }
-
-  
 
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYXJ6dW1hbnlhbnYiLCJhIjoiY2xiemtydnB4M2xzMDNwcGxoN3NmbjVnNiJ9.3jfLzShbGXEwqiezliN8lQ";
@@ -259,11 +240,11 @@ const Home: NextPage = () => {
     const debugParam = urlParams.get("debug");
 
     var mapparams: any = {
-      container: divRef.current, 
-      style: "mapbox://styles/mapbox/dark-v11",  
- 
-      center: [-118.41, 34], 
-      zoom: formulaForZoom(),  
+      container: divRef.current,
+      style: "mapbox://styles/mapbox/dark-v11",
+
+      center: [-118.41, 34],
+      zoom: formulaForZoom(),
     };
 
     const map = new mapboxgl.Map(mapparams);
@@ -274,7 +255,7 @@ const Home: NextPage = () => {
     try {
       if (rtldone === false && hasStartedControls === false) {
         setHasStartedControls(true);
-      
+
         mapboxgl.setRTLTextPlugin(
           "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.10.1/mapbox-gl-rtl-text.js",
           (callbackinfo: any) => {
@@ -1769,59 +1750,56 @@ const Home: NextPage = () => {
 
             if (filteredfeatures.length > 0) {
               if (filteredfeatures[0]) {
-             //   if (filteredfeatures[0].properties) {
-                  if (filteredfeatures[0].properties) {
-                
-                    console.log("filteredfeatures", filteredfeatures);
+                //   if (filteredfeatures[0].properties) {
+                if (filteredfeatures[0].properties) {
+                  console.log("filteredfeatures", filteredfeatures);
 
-                    const allthelineitems = filteredfeatures.map(
-                      (eachdeath) => {
-                        if (eachdeath.properties) {
-                          let address = eachdeath.properties["Address"];
-                          if (address === "N/A") {
-                            address = "";
-                          }
-                          let city = eachdeath.properties["City"];
-                          if (city === "N/A") {
-                            city = "";
-                          }
-                          let zip = eachdeath.properties["ZIP"];
-                          if (zip === "N/A") {
-                            zip = "";
-                          }
-                          let phone = eachdeath.properties["Phone Number"];
-                          if (phone === "N/A") {
-                            phone = "";
-                          }
-                          let vet = eachdeath.properties["Veterinarian"];
-                          if (vet === "N/A") {
-                            vet = "";
-                          }
-                          let catSN = eachdeath.properties["Cat S/N"];
-                          if (catSN === "N/A") {
-                            catSN = "";
-                          }
-                          let dogSN = eachdeath.properties["Dog S/N"];
-                          if (dogSN === "N/A") {
-                            dogSN = "";
-                          }
-                          let rabbitSN = eachdeath.properties["Rabbit S/N"];
-                          if (rabbitSN === "N/A") {
-                            rabbitSN = "";
-                          }
-                          let ccp =
-                            eachdeath.properties["Community Cat Program data"];
-                          if (ccp === "N/A") {
-                            ccp = "";
-                          }
-                          let dfs =
-                            eachdeath.properties["Discounted/Free/Shelter"];
-                          if (dfs === "N/A") {
-                            dfs = "";
-                          }
+                  const allthelineitems = filteredfeatures.map((eachdeath) => {
+                    if (eachdeath.properties) {
+                      let address = eachdeath.properties["Address"];
+                      if (address === "N/A") {
+                        address = "";
+                      }
+                      let city = eachdeath.properties["City"];
+                      if (city === "N/A") {
+                        city = "";
+                      }
+                      let zip = eachdeath.properties["ZIP"];
+                      if (zip === "N/A") {
+                        zip = "";
+                      }
+                      let phone = eachdeath.properties["Phone Number"];
+                      if (phone === "N/A") {
+                        phone = "";
+                      }
+                      let vet = eachdeath.properties["Veterinarian"];
+                      if (vet === "N/A") {
+                        vet = "";
+                      }
+                      let catSN = eachdeath.properties["Cat S/N"];
+                      if (catSN === "N/A") {
+                        catSN = "";
+                      }
+                      let dogSN = eachdeath.properties["Dog S/N"];
+                      if (dogSN === "N/A") {
+                        dogSN = "";
+                      }
+                      let rabbitSN = eachdeath.properties["Rabbit S/N"];
+                      if (rabbitSN === "N/A") {
+                        rabbitSN = "";
+                      }
+                      let ccp =
+                        eachdeath.properties["Community Cat Program data"];
+                      if (ccp === "N/A") {
+                        ccp = "";
+                      }
+                      let dfs = eachdeath.properties["Discounted/Free/Shelter"];
+                      if (dfs === "N/A") {
+                        dfs = "";
+                      }
 
-                          // Include only values that are not "N/A"
-                          return `
+                      // Include only values that are not "N/A"
+                      return `
                         <li class="leading-none my-1">
                           <div class="location">${
                             eachdeath.properties["Location"] || ""
@@ -1858,14 +1836,13 @@ const Home: NextPage = () => {
                           }
                         </li>
                       `;
-                        }
-                      }
-                    );
+                    }
+                  });
 
-                    popup
-                      .setLngLat(coordinates)
-                      .setHTML(
-                        ` <div>
+                  popup
+                    .setLngLat(coordinates)
+                    .setHTML(
+                      ` <div>
                
                
                 <ul class='list-disc leading-none'>${
@@ -1891,18 +1868,16 @@ const Home: NextPage = () => {
                 flex-direction: column;
               }
               </style>`
-                      )
-                      .addTo(map);
-                  }
-             //   }
+                    )
+                    .addTo(map);
+                }
+                //   }
               }
             }
           }
         });
 
         map.on("mouseleave", "park-volcanoes", () => {
-      
-
           if (urlParams.get("stopmouseleave") === null) {
             map.getCanvas().style.cursor = "";
             popup.remove();
@@ -1962,7 +1937,6 @@ const Home: NextPage = () => {
           },
           marker: true,
         });
- 
 
         var colormarker = new mapboxgl.Marker({
           color: "#41ffca",
@@ -2069,15 +2043,11 @@ const Home: NextPage = () => {
         //   map.showTerrainWireframe = true;
         // }
 
-   
-
         map.loadImage("/map-marker.png", (error, image: any) => {
           if (error) throw error;
 
           // Add the image to the map style.
           map.addImage("map-marker", image);
-
-     
         });
 
         if (
@@ -2100,7 +2070,6 @@ const Home: NextPage = () => {
                 data: citybounds,
               },
               paint: {
-             
                 "line-color": "#dddddd",
                 "line-opacity": 1,
                 "line-width": 3,
@@ -2108,25 +2077,19 @@ const Home: NextPage = () => {
             },
             "waterway-label"
           );
-
-      
-
-       
         }
 
         if (hasStartedControls === false) {
-          
           map.addControl(new mapboxgl.NavigationControl());
 
-     
           map.addControl(
             new mapboxgl.GeolocateControl({
               positionOptions: {
                 enableHighAccuracy: true,
               },
-            
+
               trackUserLocation: true,
-           
+
               showUserHeading: true,
             })
           );
@@ -2370,7 +2333,7 @@ const Home: NextPage = () => {
                         <button
                           className="align-middle bg-gray-800 rounded-lg px-1  border border-gray-400 text-sm md:text-base"
                           onClick={() => {
-                          //  debugger;
+                            //  debugger;
                             setfilteredracepre(filterableraceskeys);
 
                             mapref.current.setFilter("park-volcanoes", [
@@ -2461,7 +2424,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2678,7 +2641,6 @@ const Home: NextPage = () => {
                       </p>
                     </div>
                   )}
-          
                 </div>
               </div>
 

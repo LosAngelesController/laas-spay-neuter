@@ -14,7 +14,7 @@ import { getAuth, signInWithCustomToken } from "firebase/auth";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import MapboxLanguage from "@mapbox/mapbox-gl-language";
 import Nav from "../components/nav";
-//import { CloseButton } from "@/components/CloseButton";
+ 
 import { MantineProvider, Checkbox } from "@mantine/core";
 import React, { useEffect, useState, useRef } from "react";
 import { initializeApp } from "firebase/app";
@@ -52,59 +52,7 @@ function getLang() {
   return navigator.language;
 }
 
-var councilareasdistrict: any = {
-  "1": 39172374.513557486,
-  "2": 56028687.75752604,
-  "3": 91323827.86998883,
-  "4": 127051659.05853269,
-  "5": 85492955.75895034,
-  "6": 70583244.58359845,
-  "7": 140330608.52718654,
-  "8": 41642747.81303825,
-  "9": 33854278.76005373,
-  "10": 38455731.29742687,
-  "11": 165241605.83628467,
-  "12": 149947134.17462063,
-  "13": 42095086.21254906,
-  "14": 63974277.0096737,
-  "15": 83429528.39743595,
-};
-
-var councilpopulations: any = {
-  "1": 248124,
-  "2": 250535,
-  "3": 257098,
-  "4": 269290,
-  "5": 269182,
-  "6": 261114,
-  "7": 266276,
-  "8": 257597,
-  "9": 255988,
-  "10": 270703,
-  "11": 270691,
-  "12": 259564,
-  "13": 252909,
-  "14": 264741,
-  "15": 258310,
-};
-
-const councilcount: any = {
-  "1": 152,
-  "2": 49,
-  "3": 35,
-  "4": 41,
-  "5": 57,
-  "6": 84,
-  "7": 44,
-  "8": 55,
-  "9": 60,
-  "10": 45,
-  "11": 48,
-  "12": 28,
-  "13": 84,
-  "14": 323,
-  "15": 62,
-};
+ 
 
 const filterableraces: any = {
   Discounted: 39,
@@ -114,16 +62,7 @@ const filterableraces: any = {
 
 const filterableraceskeys = Object.keys(filterableraces);
 
-const createdbycount: any = {
-  BOE: 1,
-  BSS: 73,
-  "Council's Office": 2142,
-  ITA: 2978,
-  LASAN: 5518,
-  "Proactive Insert": 3,
-  "Self Service": 46007,
-  "Self Service_SAN": 1509,
-};
+ 
 
 const Home: NextPage = () => {
   var councilBounds: any = {
@@ -139,73 +78,33 @@ const Home: NextPage = () => {
     }
   };
 
-  const calculateIntensityCoefficient = () => {
-    const monthdomain = sliderMonth[1] - sliderMonth[0];
-
-    if (monthdomain === 0) {
-      return 12;
-    } else {
-      const coefficient = 12 / monthdomain;
-
-      return coefficient;
-    }
-  };
-
-  const listofcreatedbyoptions = [
-    "Self Service",
-    "LASAN",
-    "Council's Office",
-    "Self Service_SAN",
-    "ITA",
-    "BSS",
-    "Proactive Insert",
-    "BOE",
-  ];
+  
 
   const listofcouncildists = Array.from({ length: 15 }, (_, i) => i + 1).map(
     (eachItem) => String(eachItem)
   );
 
-  const [createdby, setcreatedby] = useState<string[]>(listofcreatedbyoptions);
-  const [filteredcouncildistricts, setfilteredcouncildistricts] =
-    useState<string[]>(listofcouncildists);
+ 
 
   const shouldfilteropeninit =
     typeof window != "undefined" ? window.innerWidth >= 640 : false;
   const [showtotalarea, setshowtotalarea] = useState(false);
-  let [disclaimerOpen, setDisclaimerOpen] = useState(false);
-  const touchref = useRef<any>(null);
-  const isLoggedInRef = useRef(false);
-  let [housingaddyopen, sethousingaddyopen] = useState(false);
+ 
   var mapref: any = useRef(null);
   const okaydeletepoints: any = useRef(null);
-  var [metric, setmetric] = useState(false);
-  const [showInitInstructions, setshowInitInstructions] = useState(true);
+ 
   const [doneloadingmap, setdoneloadingmap] = useState(false);
-  const [sliderMonth, setsliderMonthAct] = useState<any>([1, 12]);
+ 
   const [selectedfilteropened, setselectedfilteropened] = useState("race");
-  const [deletemaxoccu, setdeletemaxoccu] = useState(false);
-  const [datasetloaded, setdatasetloaded] = useState(false);
-  const refismaploaded = useRef(false);
-  const [sheltersperdist, setsheltersperdist] = useState<any>({});
+ 
   const [filteredraces, setfilteredraces] = useState<string[]>(
     Object.entries(filterableraces).map((eachrace) => eachrace[0])
   );
-  const [totalbedsperdist, settotalbedsperdist] = useState<any>({});
-  const [bedsavailableperdist, setbedsavailableperdist] = useState<any>({});
+ 
   const [filterpanelopened, setfilterpanelopened] =
     useState(shouldfilteropeninit);
 
   const [mapboxloaded, setmapboxloaded] = useState(false);
-
-  const setfilteredcouncildistrictspre = (input: string[]) => {
-    console.log("inputvalidator", input);
-    if (input.length === 0) {
-      setfilteredcouncildistricts(["99999"]);
-    } else {
-      setfilteredcouncildistricts(input);
-    }
-  };
 
   const setfilteredracepre = (input: string[]) => {
     console.log("inputvalidator", input);
@@ -216,88 +115,15 @@ const Home: NextPage = () => {
     }
   };
 
-  const sheltersperdistcompute = (data: any) => {
-    const sheltersperdist: any = {};
-
-    const locationcountperdist: any = {};
-
-    data.rows.forEach((eachrow: any) => {
-      if (typeof sheltersperdist[eachrow.cd] === "undefined") {
-        sheltersperdist[eachrow.cd] = new Set();
-      }
-
-      sheltersperdist[eachrow.cd].add(String(eachrow.address));
-    });
-
-    Object.entries(sheltersperdist).forEach(
-      ([cdnumber, shelterset]: [string, any]) => {
-        locationcountperdist[cdnumber] = shelterset.size;
-      }
-    );
-
-    setsheltersperdist(locationcountperdist);
-
-    const shelterbedstotal = data.rows.reduce((acc: any, obj: any) => {
-      const key = String(obj.cd);
-
-      if (!acc[key]) {
-        acc[key] = obj.total_beds;
-      }
-      acc[key] = acc[key] + obj.total_beds;
-
-      return acc;
-    }, {});
-
-    settotalbedsperdist(shelterbedstotal);
-
-    const shelterbedsavaliable = data.rows.reduce((acc: any, obj: any) => {
-      const key = String(obj.cd);
-
-      if (!acc[key]) {
-        acc[key] = obj.beds_available;
-      }
-      acc[key] = acc[key] + obj.beds_available;
-
-      return acc;
-    }, {});
-
-    setbedsavailableperdist(shelterbedsavaliable);
-  };
+ 
 
   const [shelterselected, setshelterselected] = useState<any>(null);
 
-  const [user, loading, error] = useAuthState(auth);
+ 
 
-  const datadogconfig: any = {
-    applicationId: "54ed9846-68b0-4811-a47a-7330cf1828a0",
-    clientToken: "pub428d48e3143310cf6a9dd00003773f12",
-    site: "datadoghq.com",
-    service: "beds",
-    env: "prod",
-    // Specify a version number to identify the deployed version of your application in Datadog
-    // version: '1.0.0',
+ 
 
-    sessionSampleRate: 100,
-    sessionReplaySampleRate: 100,
-    trackUserInteractions: true,
-    trackResources: true,
-    trackLongTasks: true,
-    defaultPrivacyLevel: "allow",
-  };
-
-  datadogRum.init(datadogconfig);
-
-  datadogRum.startSessionReplayRecording();
-
-  const setsliderMonth = (event: Event, newValue: number | number[]) => {
-    setsliderMonthAct(newValue as number[]);
-  };
-
-  const setsliderMonthVerTwo = (input: any) => {
-    console.log(input);
-    setsliderMonthAct(input);
-  };
-
+ 
   function turfify(polygon: any) {
     var turffedpolygon;
 
@@ -340,13 +166,13 @@ const Home: NextPage = () => {
   useEffect(() => {
     let arrayoffilterables: any = [];
 
-    arrayoffilterables.push([
-      "match",
-      ["get", "CD#"],
-      filteredcouncildistricts.map((x) => String(x)),
-      true,
-      false,
-    ]);
+    // arrayoffilterables.push([
+    //   "match",
+    //   ["get", "CD#"],
+    //   filteredcouncildistricts.map((x) => String(x)),
+    //   true,
+    //   false,
+    // ]);
 
     arrayoffilterables.push([
       "match",
@@ -370,7 +196,7 @@ const Home: NextPage = () => {
         }
       }
     }
-  }, [filteredcouncildistricts, filteredraces]);
+  }, [ filteredraces]);
 
   function checkHideOrShowTopRightGeocoder() {
     var toprightbox = document.querySelector(".mapboxgl-ctrl-top-right");
@@ -400,97 +226,7 @@ const Home: NextPage = () => {
 
   const divRef: any = React.useRef<HTMLDivElement>(null);
 
-  function convertDataFromBackend(data: any) {
-    /*
-        var featuresarray = data.rows.map((eachRow:any) => {
-          return {
-            "type": "Feature",
-      "properties": {
-        ...eachRow
-      },
-      "geometry": {
-        "coordinates": [
-          eachRow.lng,
-         eachRow.lat
-        ],
-        "type": "Point"
-          }
-
-        }*/
-
-    var objectbylocation: any = {};
-
-    data.rows.forEach((eachRow: any) => {
-      const uniq = `${eachRow.lat}` + `${eachRow.lng}`;
-
-      if (objectbylocation[uniq] === undefined) {
-        objectbylocation[uniq] = {};
-      }
-
-      if (eachRow.total_beds === null) {
-        eachRow.total_beds = 0;
-      }
-
-      if (eachRow.beds_available === null) {
-        eachRow.beds_available = 0;
-      }
-
-      if (objectbylocation[uniq].total_beds === undefined) {
-        objectbylocation[uniq].total_beds = eachRow.total_beds;
-      } else {
-        objectbylocation[uniq].total_beds += eachRow.total_beds;
-      }
-
-      if (objectbylocation[uniq].beds_available === undefined) {
-        objectbylocation[uniq].beds_available = eachRow.beds_available;
-      } else {
-        objectbylocation[uniq].beds_available += eachRow.beds_available;
-      }
-
-      objectbylocation[uniq].occper =
-        1 -
-        objectbylocation[uniq].beds_available /
-          objectbylocation[uniq].total_beds;
-
-      objectbylocation[uniq].organization_name = eachRow.organization_name;
-      objectbylocation[uniq].lat = eachRow.lat;
-      objectbylocation[uniq].lng = eachRow.lng;
-      objectbylocation[uniq].address = eachRow.address;
-      objectbylocation[uniq].spa = eachRow.spa;
-      objectbylocation[uniq].cd = eachRow.cd;
-
-      if (objectbylocation[uniq].shelterarray === undefined) {
-        objectbylocation[uniq].shelterarray = [];
-      }
-      objectbylocation[uniq].shelterarray.push(eachRow);
-    });
-
-    console.log(objectbylocation);
-
-    const featuresarray = Object.values(objectbylocation).map(
-      (eachLocation: any) => {
-        return {
-          type: "Feature",
-          properties: {
-            ...eachLocation,
-          },
-          geometry: {
-            coordinates: [eachLocation.lng, eachLocation.lat],
-            type: "Point",
-          },
-        };
-      }
-    );
-
-    console.log(featuresarray);
-
-    const geojsonsdflsf: any = {
-      type: "FeatureCollection",
-      features: featuresarray,
-    };
-
-    return geojsonsdflsf;
-  }
+  
 
   useEffect(() => {
     console.log("map div", divRef);
@@ -499,8 +235,7 @@ const Home: NextPage = () => {
       console.log("app render");
     }
 
-    // mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
-    //import locations from './features.geojson'
+  
 
     mapboxgl.accessToken =
       "pk.eyJ1IjoiYXJ6dW1hbnlhbnYiLCJhIjoiY2xiemtydnB4M2xzMDNwcGxoN3NmbjVnNiJ9.3jfLzShbGXEwqiezliN8lQ";
@@ -524,14 +259,11 @@ const Home: NextPage = () => {
     const debugParam = urlParams.get("debug");
 
     var mapparams: any = {
-      container: divRef.current, // container ID
-      //affordablehousing2022-dev-copy
-      style: "mapbox://styles/mapbox/dark-v11", // style URL (THIS IS STREET VIEW)
-      //mapbox://styles/comradekyler/cl5c3eukn00al15qxpq4iugtn
-      //affordablehousing2022-dev-copy-copy
-      //  style: 'mapbox://styles/comradekyler/cl5c3eukn00al15qxpq4iugtn?optimize=true', // style URL
-      center: [-118.41, 34], // starting position [lng, lat]
-      zoom: formulaForZoom(), // starting zoom
+      container: divRef.current, 
+      style: "mapbox://styles/mapbox/dark-v11",  
+ 
+      center: [-118.41, 34], 
+      zoom: formulaForZoom(),  
     };
 
     const map = new mapboxgl.Map(mapparams);
@@ -542,8 +274,7 @@ const Home: NextPage = () => {
     try {
       if (rtldone === false && hasStartedControls === false) {
         setHasStartedControls(true);
-        //multilingual support
-        //right to left allows arabic rendering
+      
         mapboxgl.setRTLTextPlugin(
           "https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.10.1/mapbox-gl-rtl-text.js",
           (callbackinfo: any) => {
@@ -2038,10 +1769,9 @@ const Home: NextPage = () => {
 
             if (filteredfeatures.length > 0) {
               if (filteredfeatures[0]) {
-                if (filteredfeatures[0].properties) {
+             //   if (filteredfeatures[0].properties) {
                   if (filteredfeatures[0].properties) {
-                    //  const address =
-                    //   filteredfeatures[0].properties;
+                
                     console.log("filteredfeatures", filteredfeatures);
 
                     const allthelineitems = filteredfeatures.map(
@@ -2164,19 +1894,14 @@ const Home: NextPage = () => {
                       )
                       .addTo(map);
                   }
-                }
+             //   }
               }
             }
           }
         });
 
         map.on("mouseleave", "park-volcanoes", () => {
-          //check if the url query string "stopmouseleave" is true
-          //if it is, then don't do anything
-          //if it is not, then do the following
-          /*
-  map.getCanvas().style.cursor = '';
-  popup.remove();*/
+      
 
           if (urlParams.get("stopmouseleave") === null) {
             map.getCanvas().style.cursor = "";
@@ -2237,122 +1962,7 @@ const Home: NextPage = () => {
           },
           marker: true,
         });
-
-        setdatasetloaded(true);
-
-        map.on("mousedown", "councildistrictsselectlayer", (e: any) => {
-          var sourceofcouncildistselect: any = map.getSource(
-            "selected-council-dist"
-          );
-
-          var clickeddata = e.features[0].properties.district;
-
-          var councildistpolygonfound = councildistricts.features.find(
-            (eachDist: any) => eachDist.properties.district === clickeddata
-          );
-
-          if (sourceofcouncildistselect) {
-            if (councildistpolygonfound) {
-              sourceofcouncildistselect.setData(councildistpolygonfound);
-            }
-          }
-        });
-
-        map.on("mouseenter", "shelterslayer", (e: any) => {
-          // Change the cursor style as a UI indicator.
-          map.getCanvas().style.cursor = "pointer";
-
-          var arrayOfSheltersText: any = [];
-
-          console.log("properties", e.features[0].properties);
-
-          console.log(JSON.parse(e.features[0].properties.shelterarray));
-
-          JSON.parse(e.features[0].properties.shelterarray).forEach(
-            (eachShelter: any) => {
-              arrayOfSheltersText.push(`
-          <div class="rounded-sm bg-slate-700 bg-opacity-70 px-1 py-1">
-          <strong>${eachShelter.projectname}</strong><br/>
-          ${eachShelter.type ? `Type: ${eachShelter.type}<br/>` : ""}
-         
-          ${eachShelter.total_beds} beds<br/>
-          ${eachShelter.beds_available} beds available<br/>
-          ${
-            eachShelter.male_available
-              ? `  ${eachShelter.male_available} male beds available<br/>`
-              : ""
-          }
-          
-          ${
-            eachShelter.female_available
-              ? `  ${eachShelter.female_available} female beds available<br/>`
-              : ""
-          }
-
-          ${
-            eachShelter.criteria ? `Criteria: ${eachShelter.criteria}<br/>` : ""
-          }
-          ${
-            eachShelter.last_updated &&
-            `
-            <span class='italic font-semibold'>Last Updated ${new Date(
-              eachShelter.last_updated
-            ).toLocaleDateString("default", {
-              weekday: "short",
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })}
-            </span>
-          `
-          }
-
-        
-          </div>
-            `);
-            }
-          );
-
-          var collateshelters = arrayOfSheltersText.join("");
-
-          // Copy coordinates array.
-          const coordinates = e.features[0].geometry.coordinates.slice();
-          const description = `
-          ${e.features[0].properties.organization_name}<br/>
-          ${e.features[0].properties.address}<br/>
-          <div className='flexcollate'
-          style="
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.3rem;
-"
-          >${collateshelters}</div>
-          <p>Click dot for more info</p>
-          <style>
-          .mapboxgl-popup-content {
-            background: #212121ee;
-            color: #fdfdfd;
-          }
-
-          .flexcollate {
-            row-gap: 0.5rem;
-            display: flex;
-            flex-direction: column;
-          }
-          </style>
-          `;
-
-          // Ensure that if the map is zoomed out such that multiple
-          // copies of the feature are visible, the popup appears
-          // over the copy being pointed to.
-          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-          }
-
-          // Populate the popup and set its coordinates
-          // based on the feature found.
-          popup.setLngLat(coordinates).setHTML(description).addTo(map);
-        });
+ 
 
         var colormarker = new mapboxgl.Marker({
           color: "#41ffca",
@@ -2455,48 +2065,11 @@ const Home: NextPage = () => {
           map.showPadding = true;
         }
 
-        if (urlParams.get("terraindebug")) {
-          map.showTerrainWireframe = true;
-        }
+        // if (urlParams.get("terraindebug")) {
+        //   map.showTerrainWireframe = true;
+        // }
 
-        map.addSource("selected-shelter-point", {
-          type: "geojson",
-          data: {
-            type: "FeatureCollection",
-            features: [],
-          },
-        });
-
-        map.addSource("selected-park-area", {
-          type: "geojson",
-          data: {
-            type: "FeatureCollection",
-            features: [],
-          },
-        });
-
-        if (false) {
-          map.addLayer({
-            id: "selected-park-areas",
-            source: "selected-park-area",
-            type: "line",
-            paint: {
-              "line-color": "#7dd3fc",
-              "line-width": 5,
-              "line-blur": 0,
-            },
-          });
-
-          map.addLayer({
-            id: "selected-park-areasfill",
-            source: "selected-park-area",
-            type: "fill",
-            paint: {
-              "fill-color": "#7dd3fc",
-              "fill-opacity": 0.2,
-            },
-          });
-        }
+   
 
         map.loadImage("/map-marker.png", (error, image: any) => {
           if (error) throw error;
@@ -2504,28 +2077,7 @@ const Home: NextPage = () => {
           // Add the image to the map style.
           map.addImage("map-marker", image);
 
-          if (true) {
-            map.addLayer({
-              id: "points-selected-shelter-layer",
-              type: "symbol",
-              source: "selected-shelter-point",
-              paint: {
-                "icon-color": "#41ffca",
-                "icon-translate": [0, -13],
-              },
-              layout: {
-                "icon-image": "map-marker",
-                // get the title name from the source's "title" property
-                "text-allow-overlap": true,
-                "icon-allow-overlap": true,
-                "icon-ignore-placement": true,
-                "text-ignore-placement": true,
-
-                "icon-size": 0.4,
-                "icon-text-fit": "both",
-              },
-            });
-          }
+     
         });
 
         if (
@@ -2548,8 +2100,7 @@ const Home: NextPage = () => {
                 data: citybounds,
               },
               paint: {
-                // "fill-color": "#dddddd",
-                // "fill-opacity": 0.3,
+             
                 "line-color": "#dddddd",
                 "line-opacity": 1,
                 "line-width": 3,
@@ -2558,86 +2109,24 @@ const Home: NextPage = () => {
             "waterway-label"
           );
 
-          map.addSource("citycouncildist", {
-            type: "geojson",
-            data: councildistricts,
-          });
+      
 
-          map.addLayer(
-            {
-              id: "councildistrictslayer",
-              type: "line",
-              source: "citycouncildist",
-              paint: {
-                "line-color": "#bbbbbb",
-                "line-opacity": 1,
-                "line-width": 2,
-              },
-            },
-            "road-label"
-          );
-
-          map.addLayer(
-            {
-              id: "councildistrictsselectlayer",
-              type: "fill",
-              source: "citycouncildist",
-              paint: {
-                "fill-color": "#000000",
-                "fill-opacity": 0,
-              },
-            },
-            "road-label"
-          );
-
-          map.addSource("selected-council-dist", {
-            type: "geojson",
-            data: {
-              type: "FeatureCollection",
-              features: [],
-            },
-          });
-
-          map.addLayer(
-            {
-              id: "selected-council-dist-layer",
-              type: "fill",
-              source: "selected-council-dist",
-              paint: {
-                "fill-color": "#bdbdeb",
-                "fill-opacity": 0.1,
-              },
-            },
-            "road-label"
-          );
-
-          map.addLayer(
-            {
-              id: "selected-council-dist-layer",
-              type: "fill",
-              source: "selected-council-dist",
-              paint: {
-                "fill-color": "#bdbdeb",
-                "fill-opacity": 0.09,
-              },
-            },
-            "aeroway-polygon"
-          );
+       
         }
 
         if (hasStartedControls === false) {
-          // Add zoom and rotation controls to the map.
+          
           map.addControl(new mapboxgl.NavigationControl());
 
-          // Add geolocate control to the map.
+     
           map.addControl(
             new mapboxgl.GeolocateControl({
               positionOptions: {
                 enableHighAccuracy: true,
               },
-              // When active the map will receive updates to the device's location as it changes.
+            
               trackUserLocation: true,
-              // Draw an arrow next to the location dot to indicate which direction the device is heading.
+           
               showUserHeading: true,
             })
           );
@@ -2731,12 +2220,12 @@ const Home: NextPage = () => {
           <meta
             name="twitter:title"
             key="twittertitle"
-            content="Unhoused Deaths in Los Angeles | Map"
+            content="LAAS Spay Neuter & Shelter | Map"
           ></meta>
           <meta
             name="twitter:description"
             key="twitterdesc"
-            content="Unhoused Deaths of 2022 in Los Angeles, Filtered by Race & Council District."
+            content="LAAS Spay Neuter & Shelter of 2023 in Los Angeles, Filtered by Discounted/Free/Shelter."
           ></meta>
           <meta
             name="twitter:image"
@@ -2745,7 +2234,7 @@ const Home: NextPage = () => {
           ></meta>
           <meta
             name="description"
-            content="Unhoused Deaths of 2022 in Los Angeles, Filtered by Race & Council District."
+            content="LAAS Spay Neuter & Shelter of 2023 in Los Angeles, Filtered by Discounted/Free/Shelter."
           />
 
           <meta
@@ -2881,7 +2370,7 @@ const Home: NextPage = () => {
                         <button
                           className="align-middle bg-gray-800 rounded-lg px-1  border border-gray-400 text-sm md:text-base"
                           onClick={() => {
-                            debugger;
+                          //  debugger;
                             setfilteredracepre(filterableraceskeys);
 
                             mapref.current.setFilter("park-volcanoes", [
@@ -3034,7 +2523,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -3078,7 +2567,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -3189,63 +2678,7 @@ const Home: NextPage = () => {
                       </p>
                     </div>
                   )}
-                  {selectedfilteropened === "cd" && (
-                    <div className="mt-2">
-                      <div className="flex flex-row gap-x-1">
-                        <button
-                          className="align-middle bg-gray-800 rounded-lg px-1  border border-gray-400 text-sm md:text-base"
-                          onClick={() => {
-                            setfilteredcouncildistrictspre(listofcouncildists);
-                          }}
-                        >
-                          Select All
-                        </button>
-                        <button
-                          className="align-middle bg-gray-800 rounded-lg px-1 text-sm md:text-base border border-gray-400"
-                          onClick={() => {
-                            setfilteredcouncildistrictspre([]);
-                          }}
-                        >
-                          Unselect All
-                        </button>
-                        <button
-                          onClick={() => {
-                            setfilteredcouncildistrictspre(
-                              listofcouncildists.filter(
-                                (n) => !filteredcouncildistricts.includes(n)
-                              )
-                            );
-                          }}
-                          className="align-middle bg-gray-800 rounded-lg px-1 text-sm md:text-base  border border-gray-400"
-                        >
-                          Invert
-                        </button>
-                      </div>
-                      <Checkbox.Group
-                        value={filteredcouncildistricts}
-                        onChange={setfilteredcouncildistrictspre}
-                      >
-                        {" "}
-                        <div
-                          className={`grid grid-cols-3
-                          } gap-x-4 `}
-                        >
-                          {listofcouncildists.map((item, key) => (
-                            <Checkbox
-                              value={item}
-                              label={
-                                <span className="text-nowrap text-xs">
-                                  <span className="text-white">{item}</span>{" "}
-                                  <span>{councilcount[String(item)]}</span>
-                                </span>
-                              }
-                              key={key}
-                            />
-                          ))}
-                        </div>
-                      </Checkbox.Group>
-                    </div>
-                  )}
+          
                 </div>
               </div>
 

@@ -2618,7 +2618,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                       }
                                     }}
@@ -2629,7 +2629,7 @@ const Home: NextPage = () => {
                           </Checkbox.Group>
                         </div>{" "}
                       </div>{" "}
-                      {/* the source */}
+                      {/* the source
                       <p className="text-gray-200 text-xs">
                         Source:{" "}
                         <a
@@ -2638,7 +2638,7 @@ const Home: NextPage = () => {
                         >
                           L.A. Animal Services | Spay and Neuter
                         </a>
-                      </p>
+                      </p> */}
                     </div>
                   )}
                 </div>

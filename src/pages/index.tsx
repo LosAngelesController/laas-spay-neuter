@@ -2629,16 +2629,15 @@ const Home: NextPage = () => {
                           </Checkbox.Group>
                         </div>{" "}
                       </div>{" "}
-                    
-                     <p className="text-gray-200 text-xs">
-                         Source:{" "}
+                      <p className="text-gray-200 text-xs">
+                        Source:{" "}
                         <a
-                         href="https://www.laanimalservices.com/spay-and-neuter"
-                        target="_blank"
-                      >
-                         L.A. Animal Services | Spay and Neuter
-                       </a>
-                    </p>
+                          href="https://www.laanimalservices.com/spay-and-neuter"
+                          target="_blank" rel="noopener noreferrer"
+                        >
+                          L.A. Animal Services | Spay and Neuter
+                        </a>
+                      </p>
                     </div>
                   )}
                 </div>

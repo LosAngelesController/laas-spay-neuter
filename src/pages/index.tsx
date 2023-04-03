@@ -2364,7 +2364,7 @@ const Home: NextPage = () => {
                               ["get", "Discounted/Free/Shelter"],
                               "ABC",
                             ]);
-                       
+                      
                             mapref.current.setLayoutProperty(
                               "deathslayer",
                               "visibility",
@@ -2463,7 +2463,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",

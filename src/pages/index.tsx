@@ -2345,7 +2345,8 @@ const Home: NextPage = () => {
                                 "Free",
                               ],
                             ]);
-                         
+                            // mapref.current.setFilter('deathslayer', ['all', ["in", "Discounted/Free/Shelter",'Shelter'] ] );
+                            // mapref.current.addLayer('deathslayer')
                             mapref.current.setLayoutProperty(
                               "deathslayer",
                               "visibility",
@@ -2364,7 +2365,7 @@ const Home: NextPage = () => {
                               ["get", "Discounted/Free/Shelter"],
                               "ABC",
                             ]);
-                      
+                            //  mapref.current.removeLayer('deathslayer')
                             mapref.current.setLayoutProperty(
                               "deathslayer",
                               "visibility",

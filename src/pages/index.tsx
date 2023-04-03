@@ -2520,7 +2520,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",

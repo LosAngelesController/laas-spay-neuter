@@ -173,7 +173,7 @@ const Home: NextPage = () => {
         }
       }
     }
-  }, [filteredraces, doneloadingmap]);
+  }, [filteredraces]);
 
   function checkHideOrShowTopRightGeocoder() {
     var toprightbox = document.querySelector(".mapboxgl-ctrl-top-right");
@@ -2406,7 +2406,7 @@ const Home: NextPage = () => {
                             mapref.current.setLayoutProperty(
                               "deathslayer",
                               "visibility",
-                              "none"
+                              "visible"
                             );
                           }}
                         >
@@ -2425,7 +2425,7 @@ const Home: NextPage = () => {
                             mapref.current.setLayoutProperty(
                               "deathslayer",
                               "visibility",
-                              "none"
+                              "visible"
                             );
                           }}
                         >
@@ -2737,7 +2737,7 @@ const Home: NextPage = () => {
                         mapref.current.setLayoutProperty(
                           "points-selected-shelter-layer",
                           "visibility",
-                          "none"
+                          "visible"
                         );
                       }
                     } else {

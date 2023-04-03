@@ -151,8 +151,6 @@ const Home: NextPage = () => {
   useEffect(() => {
     let arrayoffilterables: any = [];
 
- 
-
     arrayoffilterables.push([
       "match",
       ["get", "Race"],
@@ -172,7 +170,6 @@ const Home: NextPage = () => {
         if (doneloadingmap === true) {
           mapref.current.setFilter("deathsheatmap", filterinput);
           mapref.current.setFilter("deathsdots", filterinput);
-          
         }
       }
     }
@@ -1721,13 +1718,13 @@ const Home: NextPage = () => {
 
         // map.on("mousemove", "park-volcanoes", (e) => {
         //   console.log("mousemove", e, e.features);
-        
+
         //   if (e.features) {
         //     map.getCanvas().style.cursor = "pointer";
         //     const closestcoords: any = computeclosestcoordsfromevent(e);
-        
+
         //     const uniquefeatures = new Map(); // Use a Map to store unique features by coordinates
-        
+
         //     // Iterate over all features to find unique features at closestcoords
         //     e.features.forEach((feature: any) => {
         //       const coords = feature.geometry.coordinates;
@@ -1735,12 +1732,12 @@ const Home: NextPage = () => {
         //         uniquefeatures.set(coords.join(","), feature);
         //       }
         //     });
-        
+
         //     const filteredfeatures = [...uniquefeatures.values()]; // Convert Map values back to an array
-        
+
         //     // Copy coordinates array.
         //     const coordinates = closestcoords.slice();
-        
+
         //     // Ensure that if the map is zoomed out such that multiple
         //     // copies of the feature are visible, the popup appears
         //     // over the copy being pointed to.
@@ -1771,29 +1768,32 @@ const Home: NextPage = () => {
         //     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         //       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         //     }
-        
+
         map.on("mousemove", "park-volcanoes", (e) => {
           console.log("mousemove", e, e.features);
-        
+
           if (e.features) {
             map.getCanvas().style.cursor = "pointer";
             const closestcoords: any = computeclosestcoordsfromevent(e);
-        
+
             const uniquefeatures = new Map(); // Use a Map to store unique features by coordinates
-        
+
             // Iterate over all features to find unique features at closestcoords
             e.features.forEach((feature: any) => {
               const coords = feature.geometry.coordinates;
-              if (coords[0] === closestcoords[0] && coords[1] === closestcoords[1]) {
+              if (
+                coords[0] === closestcoords[0] &&
+                coords[1] === closestcoords[1]
+              ) {
                 uniquefeatures.set(coords.join(","), feature);
               }
             });
-        
+
             const filteredfeatures = [...uniquefeatures.values()]; // Convert Map values back to an array
-        
+
             // Copy coordinates array.
             const coordinates = closestcoords.slice();
-        
+
             // Ensure that if the map is zoomed out such that multiple
             // copies of the feature are visible, the popup appears
             // over the copy being pointed to.
@@ -1803,56 +1803,58 @@ const Home: NextPage = () => {
 
             if (filteredfeatures.length > 0) {
               if (filteredfeatures[0]) {
-                   if (filteredfeatures[0].properties) {
                 if (filteredfeatures[0].properties) {
-                  console.log("filteredfeatures", filteredfeatures);
+                  if (filteredfeatures[0].properties) {
+                    console.log("filteredfeatures", filteredfeatures);
 
-                  const allthelineitems = filteredfeatures.map((eachdeath) => {
-                    if (eachdeath.properties) {
-                      let address = eachdeath.properties["Address"];
-                      if (address === "N/A") {
-                        address = "";
-                      }
-                      let city = eachdeath.properties["City"];
-                      if (city === "N/A") {
-                        city = "";
-                      }
-                      let zip = eachdeath.properties["ZIP"];
-                      if (zip === "N/A") {
-                        zip = "";
-                      }
-                      let phone = eachdeath.properties["Phone Number"];
-                      if (phone === "N/A") {
-                        phone = "";
-                      }
-                      let vet = eachdeath.properties["Veterinarian"];
-                      if (vet === "N/A") {
-                        vet = "";
-                      }
-                      let catSN = eachdeath.properties["Cat S/N"];
-                      if (catSN === "N/A") {
-                        catSN = "";
-                      }
-                      let dogSN = eachdeath.properties["Dog S/N"];
-                      if (dogSN === "N/A") {
-                        dogSN = "";
-                      }
-                      let rabbitSN = eachdeath.properties["Rabbit S/N"];
-                      if (rabbitSN === "N/A") {
-                        rabbitSN = "";
-                      }
-                      let ccp =
-                        eachdeath.properties["Community Cat Program data"];
-                      if (ccp === "N/A") {
-                        ccp = "";
-                      }
-                      let dfs = eachdeath.properties["Discounted/Free/Shelter"];
-                      if (dfs === "N/A") {
-                        dfs = "";
-                      }
+                    const allthelineitems = filteredfeatures.map(
+                      (eachdeath) => {
+                        if (eachdeath.properties) {
+                          let address = eachdeath.properties["Address"];
+                          if (address === "N/A") {
+                            address = "";
+                          }
+                          let city = eachdeath.properties["City"];
+                          if (city === "N/A") {
+                            city = "";
+                          }
+                          let zip = eachdeath.properties["ZIP"];
+                          if (zip === "N/A") {
+                            zip = "";
+                          }
+                          let phone = eachdeath.properties["Phone Number"];
+                          if (phone === "N/A") {
+                            phone = "";
+                          }
+                          let vet = eachdeath.properties["Veterinarian"];
+                          if (vet === "N/A") {
+                            vet = "";
+                          }
+                          let catSN = eachdeath.properties["Cat S/N"];
+                          if (catSN === "N/A") {
+                            catSN = "";
+                          }
+                          let dogSN = eachdeath.properties["Dog S/N"];
+                          if (dogSN === "N/A") {
+                            dogSN = "";
+                          }
+                          let rabbitSN = eachdeath.properties["Rabbit S/N"];
+                          if (rabbitSN === "N/A") {
+                            rabbitSN = "";
+                          }
+                          let ccp =
+                            eachdeath.properties["Community Cat Program data"];
+                          if (ccp === "N/A") {
+                            ccp = "";
+                          }
+                          let dfs =
+                            eachdeath.properties["Discounted/Free/Shelter"];
+                          if (dfs === "N/A") {
+                            dfs = "";
+                          }
 
-                      // Include only values that are not "N/A"
-                      return `
+                          // Include only values that are not "N/A"
+                          return `
                         <li class="leading-none my-1">
                           <div class="location">${
                             eachdeath.properties["Location"] || ""
@@ -1889,13 +1891,14 @@ const Home: NextPage = () => {
                           }
                         </li>
                       `;
-                    }
-                  });
+                        }
+                      }
+                    );
 
-                  popup
-                    .setLngLat(coordinates)
-                    .setHTML(
-                      ` <div>
+                    popup
+                      .setLngLat(coordinates)
+                      .setHTML(
+                        ` <div>
                
                
                 <ul class='list-disc leading-none'>${
@@ -1921,10 +1924,10 @@ const Home: NextPage = () => {
                 flex-direction: column;
               }
               </style>`
-                    )
-                    .addTo(map);
-                }
+                      )
+                      .addTo(map);
                   }
+                }
               }
             }
           }
@@ -2477,7 +2480,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2507,7 +2510,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                       } else if (
                                         d.checked === false &&
@@ -2539,7 +2542,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2561,7 +2564,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2583,7 +2586,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2604,7 +2607,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2620,7 +2623,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                       } else if (
                                         d.checked === false &&
@@ -2630,7 +2633,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2643,7 +2646,6 @@ const Home: NextPage = () => {
                                             ],
                                           ]
                                         );
-                                        
                                       } else if (d.checked) {
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2672,7 +2674,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "none"
+                                          "visible"
                                         );
                                       }
                                     }}

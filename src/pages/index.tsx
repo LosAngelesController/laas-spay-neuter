@@ -2633,7 +2633,8 @@ const Home: NextPage = () => {
                         Source:{" "}
                         <a
                           href="https://www.laanimalservices.com/spay-and-neuter"
-                        
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
                           L.A. Animal Services | Spay and Neuter
                         </a>

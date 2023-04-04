@@ -2403,6 +2403,7 @@ const Home: NextPage = () => {
                                 "Discounted/Free/Shelter",
                                 "Discounted",
                                 "Free",
+                                "Shelter"
                               ],
                             ]);
                             // mapref.current.setFilter('deathslayer', ['all', ["in", "Discounted/Free/Shelter",'Shelter'] ] );
@@ -2495,6 +2496,7 @@ const Home: NextPage = () => {
                                               "Discounted/Free/Shelter",
                                               "Discounted",
                                               "Free",
+                                              "Shelter"
                                             ],
                                           ]
                                         );
@@ -2534,7 +2536,7 @@ const Home: NextPage = () => {
                                               "in",
                                               "Discounted/Free/Shelter",
                                               "Free",
-                  
+                  "Shelter"
                                             ],
                                           ]
                                         );
@@ -2556,7 +2558,7 @@ const Home: NextPage = () => {
                                               "in",
                                               "Discounted/Free/Shelter",
                                               "Discounted",
-                                    
+                                    "Shelter"
                                             ],
                                           ]
                                         );
@@ -2592,17 +2594,17 @@ const Home: NextPage = () => {
                                           "visibility",
                                           "visible"
                                         );
-                                        // mapref.current.setFilter(
-                                        //   "park-volcanoes",
-                                        //   [
-                                        //     "all",
-                                        //     [
-                                        //       "in",
-                                        //       "Discounted/Free/Shelter",
-                                        //       "Shelter",
-                                        //     ],
-                                        //   ]
-                                        // );
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Shelter",
+                                            ],
+                                          ]
+                                        );
                                       } else if (
                                         d.checked === true &&
                                         f.checked === false &&
@@ -2679,6 +2681,17 @@ const Home: NextPage = () => {
                                           "deathslayer",
                                           "visibility",
                                           "visible"
+                                        );
+                                        mapref.current.setFilter(
+                                          "park-volcanoes",
+                                          [
+                                            "all",
+                                            [
+                                              "in",
+                                              "Discounted/Free/Shelter",
+                                              "Shelter",
+                                            ],
+                                          ]
                                         );
                                       }
                                     }}

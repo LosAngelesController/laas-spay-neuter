@@ -2264,7 +2264,7 @@ const Home: NextPage = () => {
           <meta property="og:title" content="LAAS Spay Neuter & Shelter| Map" />
           <meta
             property="og:description"
-            content="Unhoused Deaths of 2022 in Los Angeles, Filtered by Race & Council District."
+            content="LAAS Spay Neuter & Shelter of 2023  in Los Angeles, Filtered by Race & Council District."
           />
           <meta
             property="og:image"

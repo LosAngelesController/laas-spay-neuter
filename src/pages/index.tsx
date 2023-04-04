@@ -1716,59 +1716,6 @@ const Home: NextPage = () => {
           closeOnClick: false,
         });
 
-        // map.on("mousemove", "park-volcanoes", (e) => {
-        //   console.log("mousemove", e, e.features);
-
-        //   if (e.features) {
-        //     map.getCanvas().style.cursor = "pointer";
-        //     const closestcoords: any = computeclosestcoordsfromevent(e);
-
-        //     const uniquefeatures = new Map(); // Use a Map to store unique features by coordinates
-
-        //     // Iterate over all features to find unique features at closestcoords
-        //     e.features.forEach((feature: any) => {
-        //       const coords = feature.geometry.coordinates;
-        //       if (coords[0] === closestcoords[0] && coords[1] === closestcoords[1]) {
-        //         uniquefeatures.set(coords.join(","), feature);
-        //       }
-        //     });
-
-        //     const filteredfeatures = [...uniquefeatures.values()]; // Convert Map values back to an array
-
-        //     // Copy coordinates array.
-        //     const coordinates = closestcoords.slice();
-
-        //     // Ensure that if the map is zoomed out such that multiple
-        //     // copies of the feature are visible, the popup appears
-        //     // over the copy being pointed to.
-        //     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        //       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        //     }
-
-        // map.on("mousemove", "park-volcanoes", (e) => {
-        //   console.log("mousemove", e, e.features);
-
-        //   if (e.features) {
-        //     map.getCanvas().style.cursor = "pointer";
-        //     const closestcoords: any = computeclosestcoordsfromevent(e);
-
-        //     const filteredfeatures = e.features.filter((feature: any) => {
-        //       return (
-        //         feature.geometry.coordinates[0] === closestcoords[0] &&
-        //         feature.geometry.coordinates[1] === closestcoords[1]
-        //       );
-        //     });
-
-        //     // Copy coordinates array.
-        //     const coordinates = closestcoords.slice();
-
-        //     // Ensure that if the map is zoomed out such that multiple
-        //     // copies of the feature are visible, the popup appears
-        //     // over the copy being pointed to.
-        //     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        //       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        //     }
-
         map.on("mousemove", "park-volcanoes", (e) => {
           console.log("mousemove", e, e.features);
 
@@ -1781,15 +1728,13 @@ const Home: NextPage = () => {
             // Iterate over all features to find unique features at closestcoords
             e.features.forEach((feature: any) => {
               const coords = feature.geometry.coordinates;
-              if (
-                coords[0] === closestcoords[0] &&
-                coords[1] === closestcoords[1]
-              ) {
+              if (coords[0] === closestcoords[0] && coords[1] === closestcoords[1]) {
                 uniquefeatures.set(coords.join(","), feature);
               }
             });
 
             const filteredfeatures = [...uniquefeatures.values()]; // Convert Map values back to an array
+            
 
             // Copy coordinates array.
             const coordinates = closestcoords.slice();
@@ -1800,6 +1745,32 @@ const Home: NextPage = () => {
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
               coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
+
+        // map.on("mousemove", "park-volcanoes", (e) => {
+        //   console.log("mousemove", e, e.features);
+
+        //   if (e.features) {
+        //     map.getCanvas().style.cursor = "pointer";
+        //     const closestcoords: any = computeclosestcoordsfromevent(e);
+
+            // const filteredfeatures = e.features.filter((feature: any) => {
+            //   return (
+            //     feature.geometry.coordinates[0] === closestcoords[0] &&
+            //     feature.geometry.coordinates[1] === closestcoords[1]
+            //   );
+            // });
+
+        //     // Copy coordinates array.
+        //     const coordinates = closestcoords.slice();
+
+        //     // Ensure that if the map is zoomed out such that multiple
+        //     // copies of the feature are visible, the popup appears
+        //     // over the copy being pointed to.
+        //     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        //       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        //     }
+
+        
 
             if (filteredfeatures.length > 0) {
               if (filteredfeatures[0]) {
@@ -2782,7 +2753,7 @@ const Home: NextPage = () => {
               className={`absolute md:mx-auto z-9 bottom-2 left-1 md:left-1/2 md:transform md:-translate-x-1/2`}
             >
               <a
-                href="https://controller.lacontroller.gov/"
+                href="https://controller.lacity.gov/"
                 target="_blank"
                 rel="noreferrer"
               >

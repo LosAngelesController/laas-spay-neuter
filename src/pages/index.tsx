@@ -1,3 +1,7 @@
+
+
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -2425,7 +2429,7 @@ const Home: NextPage = () => {
                             mapref.current.setLayoutProperty(
                               "deathslayer",
                               "visibility",
-                              "visible"
+                              "none"
                             );
                           }}
                         >
@@ -2510,7 +2514,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                       } else if (
                                         d.checked === false &&
@@ -2530,7 +2534,7 @@ const Home: NextPage = () => {
                                               "in",
                                               "Discounted/Free/Shelter",
                                               "Free",
-                                              "Shelter",
+                  
                                             ],
                                           ]
                                         );
@@ -2552,7 +2556,7 @@ const Home: NextPage = () => {
                                               "in",
                                               "Discounted/Free/Shelter",
                                               "Discounted",
-                                              "Shelter",
+                                    
                                             ],
                                           ]
                                         );
@@ -2564,7 +2568,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2588,17 +2592,17 @@ const Home: NextPage = () => {
                                           "visibility",
                                           "visible"
                                         );
-                                        mapref.current.setFilter(
-                                          "park-volcanoes",
-                                          [
-                                            "all",
-                                            [
-                                              "in",
-                                              "Discounted/Free/Shelter",
-                                              "Shelter",
-                                            ],
-                                          ]
-                                        );
+                                        // mapref.current.setFilter(
+                                        //   "park-volcanoes",
+                                        //   [
+                                        //     "all",
+                                        //     [
+                                        //       "in",
+                                        //       "Discounted/Free/Shelter",
+                                        //       "Shelter",
+                                        //     ],
+                                        //   ]
+                                        // );
                                       } else if (
                                         d.checked === true &&
                                         f.checked === false &&
@@ -2607,7 +2611,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",
@@ -2623,7 +2627,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                       } else if (
                                         d.checked === false &&
@@ -2633,7 +2637,7 @@ const Home: NextPage = () => {
                                         mapref.current.setLayoutProperty(
                                           "deathslayer",
                                           "visibility",
-                                          "visible"
+                                          "none"
                                         );
                                         mapref.current.setFilter(
                                           "park-volcanoes",

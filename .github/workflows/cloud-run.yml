@@ -10,7 +10,7 @@ env:
   CLOUD_RUN_PROJECT_ID: ${{ secrets.CLOUD_RUN_PROJECT_NAME }}
   LOAD_BALANCER_NAME: ${{ secrets.LOAD_BALANCER_NAME }}
   # Moved to Oregon, Low CO2 usage :) and also supports cloud mapping
-  CLOUD_RUN_REGION: us-west1
+  CLOUD_RUN_REGION: us-central1
   # project-name but it can be anything you want
   REPO_NAME: laas-spay-neuter
 

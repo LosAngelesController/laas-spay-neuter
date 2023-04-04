@@ -1,7 +1,3 @@
-
-
-
-
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -2253,7 +2249,7 @@ const Home: NextPage = () => {
           <meta
             name="twitter:image"
             key="twitterimg"
-            content="https://unhouseddeaths.lacontroller.io/deaths-map.png"
+            content="https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/laas_banner.png?alt=media&token=d9ef3cd0-ad10-4599-9641-4a0c935168e0"
           ></meta>
           <meta
             name="description"
@@ -2262,17 +2258,17 @@ const Home: NextPage = () => {
 
           <meta
             property="og:url"
-            content="https://unhouseddeaths.lacontroller.io/"
+            content="https://spayneuter.lacontroller.io/"
           />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Shelter Beds Occupancy | Map" />
+          <meta property="og:title" content="LAAS Spay Neuter & Shelter| Map" />
           <meta
             property="og:description"
             content="Unhoused Deaths of 2022 in Los Angeles, Filtered by Race & Council District."
           />
           <meta
             property="og:image"
-            content="https://unhouseddeaths.lacontroller.io/deaths-map.png"
+            content="https://firebasestorage.googleapis.com/v0/b/lacontroller-2b7de.appspot.com/o/laas_banner.png?alt=media&token=d9ef3cd0-ad10-4599-9641-4a0c935168e0"
           />
         </Head>
 
@@ -2403,7 +2399,7 @@ const Home: NextPage = () => {
                                 "Discounted/Free/Shelter",
                                 "Discounted",
                                 "Free",
-                                "Shelter"
+                                "Shelter",
                               ],
                             ]);
                             // mapref.current.setFilter('deathslayer', ['all', ["in", "Discounted/Free/Shelter",'Shelter'] ] );
@@ -2496,7 +2492,7 @@ const Home: NextPage = () => {
                                               "Discounted/Free/Shelter",
                                               "Discounted",
                                               "Free",
-                                              "Shelter"
+                                              "Shelter",
                                             ],
                                           ]
                                         );
@@ -2536,7 +2532,7 @@ const Home: NextPage = () => {
                                               "in",
                                               "Discounted/Free/Shelter",
                                               "Free",
-                  "Shelter"
+                                              "Shelter",
                                             ],
                                           ]
                                         );
@@ -2558,7 +2554,7 @@ const Home: NextPage = () => {
                                               "in",
                                               "Discounted/Free/Shelter",
                                               "Discounted",
-                                    "Shelter"
+                                              "Shelter",
                                             ],
                                           ]
                                         );

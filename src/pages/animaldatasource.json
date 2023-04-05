@@ -35,7 +35,6 @@
           "Cat S/N": "No",
           "Dog S/N": "No",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -51,7 +50,6 @@
           "City": "Norwalk",
           "ZIP": 90650,
           "Phone Number": "562-282-9639",
-
           "Community Cat Program": "Yes",
           "Discounted/Free/Shelter": "Discounted"
         }
@@ -68,7 +66,6 @@
           "City": "Beverly Hills",
           "ZIP": 90210,
           "Phone Number": "310 278-2935",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -87,7 +84,6 @@
           "City": "Beverly Hills",
           "ZIP": 90210,
           "Phone Number": "310-278-2935",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -107,7 +103,6 @@
           "City": "Gardena",
           "ZIP": 90249,
           "Phone Number": "310-908-0510",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -127,7 +122,6 @@
           "City": "Gardena",
           "ZIP": 90249,
           "Phone Number": "310-908-0510",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -146,7 +140,6 @@
           "City": "Los Angeles",
           "ZIP": 90018,
           "Phone Number": "310 713-5673",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -205,7 +198,6 @@
           "ZIP": 90041,
           "Phone Number": "323 258-2122",
           "Veterinarian": "Dr. Lisa Hsuan",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -260,7 +252,6 @@
           "City": "Los Angeles",
           "ZIP": 90047,
           "Phone Number": "844 692-7722",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -303,7 +294,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -323,7 +313,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -343,7 +332,6 @@
           "Cat S/N": "No",
           "Dog S/N": "No",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -359,7 +347,6 @@
           "City": "San Pedro",
           "ZIP": 90731,
           "Phone Number": "310 241-0768",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -379,7 +366,6 @@
           "City": "San Pedro",
           "ZIP": 90731,
           "Phone Number": "310 241-0768",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -398,7 +384,6 @@
           "City": "Los Angeles",
           "ZIP": 90018,
           "Phone Number": "310 574-5555",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -418,7 +403,6 @@
           "City": "Los Angeles",
           "ZIP": 90018,
           "Phone Number": "310 574-5555",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -437,7 +421,6 @@
           "City": "Mission Hills",
           "ZIP": 91345,
           "Phone Number": "310 574-5555",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes ",
           "Rabbit S/N": "No",
@@ -457,7 +440,6 @@
           "City": "Mission Hills",
           "ZIP": 91345,
           "Phone Number": "310 574-5555",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -519,7 +501,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -536,7 +517,6 @@
           "ZIP": 91340,
           "Phone Number": "818 899-5287",
           "Veterinarian": "Dr. Amber Oliver",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -552,7 +532,6 @@
           "City": "Van Nuys",
           "ZIP": 91405,
           "Phone Number": "888 452-7381",
-
           "Discounted/Free/Shelter": "Shelter"}
       },
       {
@@ -567,7 +546,6 @@
           "City": "Sun Valley",
           "ZIP": 91352,
           "Phone Number": "818 524-2287",
-
           "Cat S/N": "Yes",
           "Dog S/N": "No",
           "Rabbit S/N": "No",
@@ -587,7 +565,6 @@
           "City": "Sun Valley",
           "ZIP": 91352,
           "Phone Number": "818 524-2287",
-
           "Cat S/N": "Yes",
           "Dog S/N": "No",
           "Rabbit S/N": "No",
@@ -649,7 +626,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -665,7 +641,6 @@
           "City": "San Pedro",
           "ZIP": 90731,
           "Phone Number": "888 452-7381",
-
           "Discounted/Free/Shelter": "Shelter"}
       },
       {
@@ -680,7 +655,6 @@
           "City": "Chatsworth",
           "ZIP": 91311,
           "Phone Number": "818 527-1344",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -700,7 +674,6 @@
           "City": "Chatsworth",
           "ZIP": 91311,
           "Phone Number": "818 527-1344",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -723,7 +696,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -743,7 +715,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -759,7 +730,6 @@
           "City": "N. Hollywood",
           "ZIP": 91601,
           "Phone Number": "818 505-0006",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -779,11 +749,9 @@
           "City": "N. Hollywood",
           "ZIP": 91601,
           "Phone Number": "818 505-0006",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Free"}
       },
       {
@@ -802,7 +770,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -822,7 +789,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No ",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -842,7 +808,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -862,7 +827,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -878,7 +842,6 @@
           "City": "Los Angeles",
           "ZIP": 90031,
           "Phone Number": "888 452-7381",
-
           "Discounted/Free/Shelter": "Shelter"}
       },
       {
@@ -897,7 +860,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -917,7 +879,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Free"}
       },
       {
@@ -936,7 +897,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -953,7 +913,6 @@
           "ZIP": 91345,
           "Phone Number": "310 738-0842",
           "Veterinarian": "",
-
           "Discounted/Free/Shelter": "Shelter"}
       },
       {
@@ -1011,7 +970,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -1027,11 +985,9 @@
           "City": "Los Angeles",
           "ZIP": 90064,
           "Phone Number": "310 473-4295",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -1047,11 +1003,9 @@
           "City": "Los Angeles",
           "ZIP": 90064,
           "Phone Number": "310 473-4295",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Free"}
       },
       {
@@ -1066,7 +1020,6 @@
           "City": "Los Angeles",
           "ZIP": 90047,
           "Phone Number": "888 452-7381",
-
           "Discounted/Free/Shelter": "Shelter"}
       },
       {
@@ -1081,11 +1034,9 @@
           "City": "San Pedro",
           "ZIP": 90732,
           "Phone Number": "310 832-5327",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -1105,7 +1056,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Free"}
       },
       {
@@ -1120,7 +1070,6 @@
           "City": "El Monte",
           "ZIP": 91733,
           "Phone Number": "818 968-7150",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -1140,7 +1089,6 @@
           "City": "El Monte",
           "ZIP": 91733,
           "Phone Number": "818 968-7150",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
@@ -1159,11 +1107,9 @@
           "City": "Canoga Park",
           "ZIP": 91303,
           "Phone Number": "818 592-0092",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Discounted"
         }
       },
@@ -1183,7 +1129,6 @@
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "No",
-
           "Discounted/Free/Shelter": "Free"}
       },
       {
@@ -1198,7 +1143,6 @@
           "City": "Agoura Hills",
           "ZIP": 91301,
           "Phone Number": "818 865-1800",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -1218,7 +1162,6 @@
           "City": "Agoura Hills",
           "ZIP": 91301,
           "Phone Number": "818 865-1800",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -1237,7 +1180,6 @@
           "City": "Los Angeles",
           "ZIP": 90064,
           "Phone Number": "888 452-7381",
-
           "Discounted/Free/Shelter": "Shelter"}
       },
       {
@@ -1252,7 +1194,6 @@
           "City": "Chatsworth",
           "ZIP": 91311,
           "Phone Number": "888 452-7381",
-
           "Discounted/Free/Shelter": "Shelter"}
       },
       {
@@ -1267,7 +1208,6 @@
           "City": "Van Nuys",
           "ZIP": 91405,
           "Phone Number": "818 510-0197",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",
@@ -1287,7 +1227,6 @@
           "City": "Van Nuys",
           "ZIP": 91405,
           "Phone Number": "818 510-0197",
-
           "Cat S/N": "Yes",
           "Dog S/N": "Yes",
           "Rabbit S/N": "Yes",

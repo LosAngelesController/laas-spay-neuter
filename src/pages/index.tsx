@@ -1037,7 +1037,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id:37, 
+                id: 37,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1184,7 +1184,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id:44, 
+                id: 44,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1784,15 +1784,13 @@ const Home: NextPage = () => {
           closeOnClick: false,
         });
 
- 
-
         // map.on("mousemove", "park-volcanoes", (e) => {
         //   console.log("mousemove", e, e.features);
-        
+
         //   if (e.features) {
         //     map.getCanvas().style.cursor = "pointer";
         //     const closestcoords: any = computeclosestcoordsfromevent(e);
-        
+
         //     const filteredfeatures = e.features.filter((feature: any) => {
         //       return (
         //         feature.geometry.coordinates[0] === closestcoords[0] &&
@@ -1804,113 +1802,107 @@ const Home: NextPage = () => {
         //         t.geometry.coordinates[1] === feature.geometry.coordinates[1]
         //       ))
         //     );
-        
+
         //     // Copy coordinates array.
         //     const coordinates = closestcoords.slice();
-        
+
         //     // Ensure that if the map is zoomed out such that multiple
         //     // copies of the feature are visible, the popup appears
         //     // over the copy being pointed to.
         //     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
         //       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
         //     }
-       
 
-        
-            map.on("mousemove", "park-volcanoes", (e) => {
-              // console.log("mousemove", e, e.features);
+        map.on("mousemove", "park-volcanoes", (e) => {
+          // console.log("mousemove", e, e.features);
 
-              if (e.features) {
-                map.getCanvas().style.cursor = "pointer";
-                const closestcoords: any = computeclosestcoordsfromevent(e);
+          if (e.features) {
+            map.getCanvas().style.cursor = "pointer";
+            const closestcoords: any = computeclosestcoordsfromevent(e);
 
             const filteredfeatures = e.features.filter((feature: any) => {
-              
               return (
                 feature.geometry.coordinates[0] === closestcoords[0] &&
                 feature.geometry.coordinates[1] === closestcoords[1]
               );
             });
-            
-            const removeDuplicatesById=()=> {
+
+            const removeDuplicatesById = () => {
               const result = [];
               const map = new Map();
-            
+
               for (const item of filteredfeatures) {
                 if (!map.has(item.id)) {
                   map.set(item.id, true);
                   result.push(item);
                 }
               }
-            
+
               return result;
-            }
+            };
             const uniqueArray = removeDuplicatesById();
             // console.log(uniqueArray);
-                // Copy coordinates array.
-                const coordinates = closestcoords.slice();
+            // Copy coordinates array.
+            const coordinates = closestcoords.slice();
 
-                // Ensure that if the map is zoomed out such that multiple
-                // copies of the feature are visible, the popup appears
-                // over the copy being pointed to.
-                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                }
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+              coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
 
             if (filteredfeatures.length > 0) {
               if (filteredfeatures[0]) {
                 if (filteredfeatures[0].properties) {
                   if (filteredfeatures[0].properties) {
-                    
-                    
-                    const allthelineitems = uniqueArray.map(
-                      (eachdeath) => {
-                        if (eachdeath.properties) {
-                          let address = eachdeath.properties["Address"];
-                          if (address === "N/A") {
-                            address = "";
-                          }
-                          let city = eachdeath.properties["City"];
-                          if (city === "N/A") {
-                            city = "";
-                          }
-                          let zip = eachdeath.properties["ZIP"];
-                          if (zip === "N/A") {
-                            zip = "";
-                          }
-                          let phone = eachdeath.properties["Phone Number"];
-                          if (phone === "N/A") {
-                            phone = "";
-                          }
-                          let vet = eachdeath.properties["Veterinarian"];
-                          if (vet === "N/A") {
-                            vet = "";
-                          }
-                          let catSN = eachdeath.properties["Cat S/N"];
-                          if (catSN === "N/A") {
-                            catSN = "";
-                          }
-                          let dogSN = eachdeath.properties["Dog S/N"];
-                          if (dogSN === "N/A") {
-                            dogSN = "";
-                          }
-                          let rabbitSN = eachdeath.properties["Rabbit S/N"];
-                          if (rabbitSN === "N/A") {
-                            rabbitSN = "";
-                          }
-                          let ccp =
-                            eachdeath.properties["Community Cat Program data"];
-                          if (ccp === "N/A") {
-                            ccp = "";
-                          }
-                          let dfs =
-                            eachdeath.properties["Discounted/Free/Shelter"];
-                          if (dfs === "N/A") {
-                            dfs = "";
-                          }
+                    const allthelineitems = uniqueArray.map((eachdeath) => {
+                      if (eachdeath.properties) {
+                        let address = eachdeath.properties["Address"];
+                        if (address === "N/A") {
+                          address = "";
+                        }
+                        let city = eachdeath.properties["City"];
+                        if (city === "N/A") {
+                          city = "";
+                        }
+                        let zip = eachdeath.properties["ZIP"];
+                        if (zip === "N/A") {
+                          zip = "";
+                        }
+                        let phone = eachdeath.properties["Phone Number"];
+                        if (phone === "N/A") {
+                          phone = "";
+                        }
+                        let vet = eachdeath.properties["Veterinarian"];
+                        if (vet === "N/A") {
+                          vet = "";
+                        }
+                        let catSN = eachdeath.properties["Cat S/N"];
+                        if (catSN === "N/A") {
+                          catSN = "";
+                        }
+                        let dogSN = eachdeath.properties["Dog S/N"];
+                        if (dogSN === "N/A") {
+                          dogSN = "";
+                        }
+                        let rabbitSN = eachdeath.properties["Rabbit S/N"];
+                        if (rabbitSN === "N/A") {
+                          rabbitSN = "";
+                        }
+                        let ccp =
+                          eachdeath.properties["Community Cat Program data"];
+                        if (ccp === "N/A") {
+                          ccp = "";
+                        }
+                        let dfs =
+                          eachdeath.properties["Discounted/Free/Shelter"];
+                        if (dfs === "N/A") {
+                          dfs = "";
+                        }
 
-                          // Include only values that are not "N/A"
-                          return `
+                        // Include only values that are not "N/A"
+                        return `
                         <li class="leading-none my-1">
                           <div class="location">${
                             eachdeath.properties["Location"] || ""
@@ -1947,9 +1939,8 @@ const Home: NextPage = () => {
                           }
                         </li>
                       `;
-                        }
                       }
-                    );
+                    });
 
                     popup
                       .setLngLat(coordinates)
@@ -2762,6 +2753,16 @@ const Home: NextPage = () => {
                           rel="noopener noreferrer"
                         >
                           L.A. Animal Services | Spay and Neuter
+                        </a>
+                      </p>
+                      <p className="text-gray-200 text-xs">
+                      
+                        <a
+                          href="https://www.lacityvet.com/onlinevoucher/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Voucher Application
                         </a>
                       </p>
                     </div>

@@ -1,1 +1,3 @@
-# 311-homeless-encamp
+# LAAS Mapbox Spay Neuter Map
+
+## Installation Instructions

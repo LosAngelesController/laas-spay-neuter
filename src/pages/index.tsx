@@ -431,48 +431,14 @@ const Home: NextPage = () => {
                     const allthelineitems = filteredfeatures.map(
                       (eachdeath) => {
                         if (eachdeath.properties) {
-                          let address = eachdeath.properties["Address"];
-                          if (address === "N/A") {
-                            address = "";
-                          }
-                          let city = eachdeath.properties["City"];
-                          if (city === "N/A") {
-                            city = "";
-                          }
-                          let zip = eachdeath.properties["ZIP"];
-                          if (zip === "N/A") {
-                            zip = "";
-                          }
-                          let phone = eachdeath.properties["Phone Number"];
-                          if (phone === "N/A") {
-                            phone = "";
-                          }
-                          let vet = eachdeath.properties["Veterinarian"];
-                          if (vet === "N/A") {
-                            vet = "";
-                          }
-                          let catSN = eachdeath.properties["Cat S/N"];
-                          if (catSN === "N/A") {
-                            catSN = "";
-                          }
-                          let dogSN = eachdeath.properties["Dog S/N"];
-                          if (dogSN === "N/A") {
-                            dogSN = "";
-                          }
-                          let rabbitSN = eachdeath.properties["Rabbit S/N"];
-                          if (rabbitSN === "N/A") {
-                            rabbitSN = "";
-                          }
-                          let ccp =
-                            eachdeath.properties["Community Cat Program data"];
-                          if (ccp === "N/A") {
-                            ccp = "";
-                          }
-                          let dfs =
-                            eachdeath.properties["Discounted/Free/Shelter"];
-                          if (dfs === "N/A") {
-                            dfs = "";
-                          }
+
+                          const allpropertiesnames = Object.keys(eachdeath.preperties);
+
+                          allpropertiesnames.forEach((eachpropertyname) => {
+                            if (eachdeath.properties[eachpropertyname] === "N/A") {
+                              eachdeath.properties[eachpropertyname] = "";
+                            }
+                          });
 
                           // Include only values that are not "N/A"
                           return `
@@ -481,33 +447,33 @@ const Home: NextPage = () => {
                             eachdeath.properties["Location"] || ""
                           }</div>
                           <div class="address">
-                            ${address ? `<span>${address}</span><br>` : ""}
-                            ${city ? `<span>${city}</span>, ` : ""}
-                            ${zip ? `<span>${zip}</span>` : ""}
+                            ${eachdeath.properties.Address ? `<span>${eachdeath.properties.Address}</span><br>` : ""}
+                            ${eachdeath.properties.City ? `<span>${eachdeath.properties.City}</span>, ` : ""}
+                            ${eachdeath.properties.ZIP ? `<span>${eachdeath.properties.ZIP}</span>` : ""}
                           </div>
                           ${
-                            phone
-                              ? `<div class="phone">Phone: ${phone}</div>`
+                            eachdeath.properties["Phone Number"]
+                              ? `<div class="phone">Phone: ${eachdeath.properties["Phone Number"]}</div>`
                               : ""
                           }
-                          ${vet ? `<div class="vet">Vet: ${vet}</div>` : ""}
+                          ${eachdeath.properties["Veterinarian"] ? `<div class="vet">Vet: ${eachdeath.properties["Veterinarian"]}</div>` : ""}
                           <div class="animals">
-                            ${catSN ? `<span>Cat S/N: ${catSN}</span><br>` : ""}
-                            ${dogSN ? `<span>Dog S/N: ${dogSN}</span><br>` : ""}
+                            ${eachdeath.properties["Cat S/N"] ? `<span>Cat S/N: ${eachdeath.properties["Cat S/N"]}</span><br>` : ""}
+                            ${eachdeath.properties["Dog S/N"] ? `<span>Dog S/N: ${eachdeath.properties["Dog S/N"]}</span><br>` : ""}
                             ${
-                              rabbitSN
-                                ? `<span>Rabbit S/N: ${rabbitSN}</span><br>`
+                              eachdeath.properties["Rabbit S/N"]
+                                ? `<span>Rabbit S/N: ${eachdeath.properties["Rabbit S/N"]}</span><br>`
                                 : ""
                             }
                             ${
-                              ccp
-                                ? `<span>Community Cat Program: ${ccp}</span>`
+                              eachdeath.properties["Community Cat Program data"]
+                                ? `<span>Community Cat Program: ${eachdeath.properties["Community Cat Program data"]}</span>`
                                 : ""
                             }
                           </div>
                           ${
-                            dfs
-                              ? `<div class="discounted">Discounted/Free/Shelter: ${dfs}</div>`
+                            eachdeath.properties["Discounted/Free/Shelter"]
+                              ? `<div class="discounted">Discounted/Free/Shelter: ${eachdeath.properties["Discounted/Free/Shelter"]}</div>`
                               : ""
                           }
                         </li>

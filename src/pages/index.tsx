@@ -47,6 +47,12 @@ function isTouchScreen() {
 
 var cacheofcdsfromnames: any = {};
 
+ 
+function showPopup() {
+  window.alert("Complete the voucher application online to receive your certificate by mail. Certification may be used at participating veterinary hospitals or on-site clinics at select city animal shelters.");
+}
+ 
+
 function getLang() {
   if (navigator.languages != undefined) return navigator.languages[0];
   return navigator.language;
@@ -2764,11 +2770,14 @@ const Home: NextPage = () => {
                           Voucher Application
                         </a>
                       </p>
+                      <p className="text-gray-200 text-xs">
+                      <button onClick={showPopup}>Instructions</button>
+                   </p>
                     </div>
                   )}
                 </div>
               </div>
-
+ 
               <div
                 className={`text-sm ${
                   shelterselected != null

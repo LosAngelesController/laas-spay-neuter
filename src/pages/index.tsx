@@ -432,7 +432,7 @@ const Home: NextPage = () => {
                       (eachdeath) => {
                         if (eachdeath.properties) {
 
-                          const allpropertiesnames = Object.keys(eachdeath.preperties);
+                          const allpropertiesnames = Object.keys(eachdeath.properties);
 
                           allpropertiesnames.forEach((eachpropertyname) => {
                             if (eachdeath.properties[eachpropertyname] === "N/A") {

@@ -1292,7 +1292,7 @@ const Home: NextPage = () => {
                   coordinates: [-118.4657246, 34.270965],
                 },
                 properties: {
-                  Location: "Northeast Valley Shelter",
+                  Location: "Paws for Life (Northeast Valley)",
                   Address: "15321 Brand Blvd",
                   City: "Mission Hills",
                   ZIP: 91345,
@@ -2756,7 +2756,6 @@ const Home: NextPage = () => {
                         </a>
                       </p>
                       <p className="text-gray-200 text-xs">
-                      
                         <a
                           href="https://www.lacityvet.com/onlinevoucher/"
                           target="_blank"

@@ -61,7 +61,7 @@ function getLang() {
 const filterableraces: any = {
   Discounted: 39,
   Free: 22,
-  Shelter: 7,
+  Shelter: 6,
 };
 
 const filterableraceskeys = Object.keys(filterableraces);

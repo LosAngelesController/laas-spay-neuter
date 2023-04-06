@@ -1290,26 +1290,9 @@ const Home: NextPage = () => {
                   "Discounted/Free/Shelter": "Discounted",
                 },
               },
+              
               {
                 id: 49,
-                type: "Feature",
-                geometry: {
-                  type: "Point",
-                  coordinates: [-118.4657246, 34.270965],
-                },
-                properties: {
-                  Location: "Paws for Life (Northeast Valley)",
-                  Address: "15321 Brand Blvd",
-                  City: "Mission Hills",
-                  ZIP: 91345,
-                  "Phone Number": "310 738-0842",
-                  Veterinarian: "",
-
-                  "Discounted/Free/Shelter": "Shelter",
-                },
-              },
-              {
-                id: 50,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1330,7 +1313,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 51,
+                id: 50,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1351,7 +1334,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 52,
+                id: 51,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1364,6 +1347,27 @@ const Home: NextPage = () => {
                   ZIP: 91342,
                   "Phone Number": "818 364-2394",
                   Veterinarian: "Dr. Teresa Long",
+                  "Cat S/N": "Yes",
+                  "Dog S/N": "Yes",
+                  "Rabbit S/N": "No",
+
+                  "Discounted/Free/Shelter": "Discounted",
+                },
+              },
+              {
+                id: 52,
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [-118.4406515, 34.0349112],
+                },
+                properties: {
+                  Location: "Shelter Veterinary-Value Vet",
+                  Address: "11361 W. Pico Blvd",
+                  City: "Los Angeles",
+                  ZIP: 90064,
+                  "Phone Number": "310 473-4295",
+
                   "Cat S/N": "Yes",
                   "Dog S/N": "Yes",
                   "Rabbit S/N": "No",
@@ -1389,32 +1393,11 @@ const Home: NextPage = () => {
                   "Dog S/N": "Yes",
                   "Rabbit S/N": "No",
 
-                  "Discounted/Free/Shelter": "Discounted",
-                },
-              },
-              {
-                id: 54,
-                type: "Feature",
-                geometry: {
-                  type: "Point",
-                  coordinates: [-118.4406515, 34.0349112],
-                },
-                properties: {
-                  Location: "Shelter Veterinary-Value Vet",
-                  Address: "11361 W. Pico Blvd",
-                  City: "Los Angeles",
-                  ZIP: 90064,
-                  "Phone Number": "310 473-4295",
-
-                  "Cat S/N": "Yes",
-                  "Dog S/N": "Yes",
-                  "Rabbit S/N": "No",
-
                   "Discounted/Free/Shelter": "Free",
                 },
               },
               {
-                id: 55,
+                id: 54,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1431,7 +1414,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 56,
+                id: 55,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1452,7 +1435,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 57,
+                id: 56,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1473,7 +1456,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 58,
+                id: 57,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1494,7 +1477,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 59,
+                id: 58,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1515,7 +1498,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 60,
+                id: 59,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1536,7 +1519,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 61,
+                id: 60,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1557,7 +1540,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 62,
+                id: 61,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1578,7 +1561,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 63,
+                id: 62,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1599,7 +1582,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 64,
+                id: 63,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1616,7 +1599,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 65,
+                id: 64,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1633,7 +1616,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 66,
+                id: 65,
                 type: "Feature",
                 geometry: {
                   type: "Point",
@@ -1654,7 +1637,7 @@ const Home: NextPage = () => {
                 },
               },
               {
-                id: 67,
+                id: 66,
                 type: "Feature",
                 geometry: {
                   type: "Point",

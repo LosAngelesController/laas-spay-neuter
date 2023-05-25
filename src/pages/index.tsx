@@ -217,7 +217,7 @@ const Home: NextPage = () => {
     }
 
     mapboxgl.accessToken =
-      "pk.eyJ1IjoiYXJ6dW1hbnlhbnYiLCJhIjoiY2xiemtydnB4M2xzMDNwcGxoN3NmbjVnNiJ9.3jfLzShbGXEwqiezliN8lQ";
+      "pk.eyJ1Ijoia2VubmV0aG1lamlhIiwiYSI6ImNsZG1oYnpxNDA2aTQzb2tkYXU2ZWc1b3UifQ.PxO_XgMo13klJ3mQw1QxlQ";
 
     const formulaForZoom = () => {
       if (typeof window != "undefined") {

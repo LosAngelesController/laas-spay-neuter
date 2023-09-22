@@ -59,8 +59,8 @@ function getLang() {
 }
 
 const filterableraces: any = {
-  Discounted: 39,
-  Free: 22,
+  Discounted: 43,
+  Free: 26,
   Shelter: 6,
 };
 
@@ -215,9 +215,9 @@ const Home: NextPage = () => {
     if (divRef.current) {
       console.log("app render");
     }
-
+//pk.eyJ1IjoiYXJ6dW1hbnlhbnYiLCJhIjoiY2xiemtydnB4M2xzMDNwcGxoN3NmbjVnNiJ9.3jfLzShbGXEwqiezliN8lQ
     mapboxgl.accessToken =
-      "pk.eyJ1IjoiYXJ6dW1hbnlhbnYiLCJhIjoiY2xiemtydnB4M2xzMDNwcGxoN3NmbjVnNiJ9.3jfLzShbGXEwqiezliN8lQ";
+      "pk.eyJ1Ijoia2VubmV0aG1lamlhIiwiYSI6ImNsZG1oYnpxNDA2aTQzb2tkYXU2ZWc1b3UifQ.PxO_XgMo13klJ3mQw1QxlQ";
 
     const formulaForZoom = () => {
       if (typeof window != "undefined") {
@@ -236,10 +236,10 @@ const Home: NextPage = () => {
     const lngParam = urlParams.get("lng");
     const zoomParam = urlParams.get("zoom");
     const debugParam = urlParams.get("debug");
-
+// /mapbox://styles/mapbox/dark-v11
     var mapparams: any = {
       container: divRef.current,
-      style: "mapbox://styles/mapbox/dark-v11",
+      style: "mapbox://styles/kennethmejia/clms6wd9l01y001r8g4fq1h9u",
 
       center: [-118.41, 34],
       zoom: formulaForZoom(),
@@ -1657,6 +1657,186 @@ const Home: NextPage = () => {
                   "Discounted/Free/Shelter": "Free",
                 },
               },
+              {
+                id: 67,
+                type: "Feature",
+                geometry: {
+                  type: "Point",
+                  coordinates: [-118.499603, 34.453469],
+                },
+                properties: {
+                  Location: "Occupuppy Project, The",
+                  Address: "28134 Shelter Cove Dr",
+                  City: "Santa Clarita",
+                  ZIP: 91350,
+                  "Phone Number": "805 874-1333",
+
+                  "Cat S/N": "No",
+                  "Dog S/N": "No",
+                  "Rabbit S/N": "No",
+                  "Community Cat Program": "Yes",
+                  "Discounted/Free/Shelter": "Discounted",
+                },
+              },
+              {
+                "id": 68,
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [-118.499603, 34.453469]
+                },
+                "properties": {
+                  "Location": "Occupuppy Project, The",
+                  "Address": "28134 Shelter Cove Dr",
+                  "City": "Santa Clarita",
+                  "ZIP": 91350,
+                  "Phone Number": "805 874-1333",
+                  "Cat S/N": "No",
+                  "Dog S/N": "No",
+                  "Rabbit S/N": "No",
+                  "Community Cat Program": "Yes",
+                  "Discounted/Free/Shelter": "Free"
+                }
+              },
+              {
+                "id": 69,
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [-117.066211, 34.013331]
+                },
+                "properties": {
+                  "Latitude": 34.013331,
+                  "Longitude": -117.066211,
+                  "Location": "Paw Mission, The",
+                  "Address": "13229 7th PL",
+                  "City": "Yucaipa",
+                  "ZIP": "92399",
+                  "Phone Number": "909 784-5895",
+                  "Veterinarian": "",
+                  "Cat S/N": "Yes",
+                  "Dog S/N": "Yes",
+                  "Rabbit S/N": "",
+                  "Community Cat Program": "Yes",
+                  "Discounted/Free/Shelter": "Discounted"
+                }
+              },
+              {
+                "id": 70,
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [-117.066211, 34.013331]
+                },
+                "properties": {
+                  "Latitude": 34.013331,
+                  "Longitude": -117.066211,
+                  "Location": "Paw Mission, The",
+                  "Address": "13229 7th pl",
+                  "City": "Yucaipa",
+                  "ZIP": "92399",
+                  "Phone Number": "909 784-5895",
+                  "Veterinarian": "",
+                  "Cat S/N": "Yes",
+                  "Dog S/N": "Yes",
+                  "Rabbit S/N": "No",
+                  "Community Cat Program": "Yes",
+                  "Discounted/Free/Shelter": "Free"
+                }
+              },
+              {
+                "id": 71,
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [-118.479183, 34.211001]
+                },
+                "properties": {
+                  "Latitude": 34.211001,
+                  "Longitude": -118.479183,
+                  "Location": "Pet Orphans of So. California",
+                  "Address": "7720 Gloria Ave",
+                  "City": "Van Nuys",
+                  "ZIP": "91406",
+                  "Phone Number": "818 901-0190",
+                  "Veterinarian": "Dr. Peyvand Silverman",
+                  "Cat S/N": "",
+                  "Dog S/N": "",
+                  "Rabbit S/N": "",
+                  "Community Cat Program": "Yes",
+                  "Discounted/Free/Shelter": "Discounted"
+                }
+              },
+              {
+                "id": 72,
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [-118.479183, 34.211001]
+                },
+                "properties": {
+                  "Latitude": 34.211001,
+                  "Longitude": -118.479183,
+                  "Location": "Pet Orphans of So. California",
+                  "Address": "7720 Gloria Ave",
+                  "City": "Van Nuys",
+                  "ZIP": "91406",
+                  "Phone Number": "818 901-0190",
+                  "Veterinarian": "Dr. Preyvand Silverman",
+                  "Cat S/N": "No",
+                  "Dog S/N": "no",
+                  "Rabbit S/N": "No",
+                  "Community Cat Program": "Yes",
+                  "Discounted/Free/Shelter": "Free"
+                }
+              },
+              {
+                "id": 73,
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [-118.3788, 34.088446]
+                },
+                "properties": {
+                  "Latitude": 34.088446,
+                  "Longitude": -118.3788,
+                  "Location": "Spay 4 LA",
+                  "Address": "8581 Santa Monica Boulevard, Suite 511",
+                  "City": "West Hollywood",
+                  "ZIP": "90069",
+                  "Phone Number": "888 792-9452",
+                  "Veterinarian": "",
+                  "Cat S/N": "",
+                  "Dog S/N": "",
+                  "Rabbit S/N": "",
+                  "Community Cat Program": "",
+                  "Discounted/Free/Shelter": "Discounted"
+                }
+              },
+              {
+                "id": 74,
+                "type": "Feature",
+                "geometry": {
+                  "type": "Point",
+                  "coordinates": [-118.3788, 34.088446]
+                },
+                "properties": {
+                  "Latitude": 34.088446,
+                  "Longitude": -118.3788,
+                  "Location": "Spay 4 LA",
+                  "Address": "8581 Santa Monica Boulevard, Suite 511",
+                  "City": "West Hollywood",
+                  "ZIP": "90069",
+                  "Phone Number": "888 792-9452",
+                  "Veterinarian": "",
+                  "Cat S/N": "",
+                  "Dog S/N": "",
+                  "Rabbit S/N": "",
+                  "Community Cat Program": "",
+                  "Discounted/Free/Shelter": "Free"
+                }
+              }
+              
             ],
           },
         });

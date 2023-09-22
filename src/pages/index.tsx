@@ -2429,12 +2429,12 @@ const Home: NextPage = () => {
         withNormalizeCSS
       >
         <Head>
-          <link
+          {/* <link
             rel="icon"
             type="image/png"
             sizes="32x32"
             href="/favicon/cropped-favicon-1-32x32.png"
-          />
+          /> */}
 
           <link
             rel="apple-touch-icon"

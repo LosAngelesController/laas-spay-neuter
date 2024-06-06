@@ -1,49 +1,25 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, createRef } from "react";
-import Slider from "rc-slider";
 import { titleCase } from "title-case";
 
 import { computeclosestcoordsfromevent } from "../components/getclosestcoordsfromevent";
 import { CloseButton } from "../components/CloseButton";
 import { signintrack, uploadMapboxTrack } from "../components/mapboxtrack";
-import TooltipSlider, { handleRender } from "../components/TooltipSlider";
-import { getAuth, signInWithCustomToken } from "firebase/auth";
 import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import MapboxLanguage from "@mapbox/mapbox-gl-language";
 import Nav from "../components/nav";
 
 import { MantineProvider, Checkbox } from "@mantine/core";
 import React, { useEffect, useState, useRef } from "react";
-import { initializeApp } from "firebase/app";
-
-import Icon from "@mdi/react";
-import { mdiPlay } from "@mdi/js";
-import { mdiPause, mdiSkipNext, mdiSkipPrevious } from "@mdi/js";
-
 import CouncilDist from "./CouncilDistricts.json";
-import { auth, signInWithGoogle, signOutOfApp } from "./../components/firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 const councildistricts = require("./CouncilDistricts.json");
 const citybounds = require("./citybounds.json");
 // @ts-ignore: Unreachable code error
 import * as turf from "@turf/turf";
-import { datadogRum } from "@datadog/browser-rum";
 
 // added the following 6 lines.
 import mapboxgl from "mapbox-gl";
-
-import { assertDeclareExportAllDeclaration } from "@babel/types";
-
-import { GeoJsonProperties, MultiPolygon, Polygon } from "geojson";
-import { Set } from "typescript";
-
-function isTouchScreen() {
-  return window.matchMedia("(hover: none)").matches;
-}
 
 var cacheofcdsfromnames: any = {};
 
@@ -51,11 +27,6 @@ function showPopup() {
   window.alert(
     "Complete the voucher application online to receive your certificate by mail. Certification may be used at participating veterinary hospitals or on-site clinics at select city animal shelters."
   );
-}
-
-function getLang() {
-  if (navigator.languages != undefined) return navigator.languages[0];
-  return navigator.language;
 }
 
 const filterableraces: any = {

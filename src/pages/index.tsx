@@ -18,7 +18,6 @@ const citybounds = require("./citybounds.json");
 // @ts-ignore: Unreachable code error
 import * as turf from "@turf/turf";
 
-// added the following 6 lines.
 import mapboxgl from "mapbox-gl";
 
 var cacheofcdsfromnames: any = {};
